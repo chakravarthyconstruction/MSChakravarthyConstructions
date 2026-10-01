@@ -93,7 +93,7 @@ export interface BusinessData {
 
 export const siteData: BusinessData = {
   name: 'M/S Chakravarthy Constructions',
-  shortName: 'Chakravarthy',
+  shortName: 'M/S Chakravarthy',
   tagline: 'Building Infrastructure That Lasts Generations.',
   subTagline:
     'Engineering robust roads, canals, reservoirs, check dams, and civil constructions across Karnataka, Andhra Pradesh, and Telangana.',
