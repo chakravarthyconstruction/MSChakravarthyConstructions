@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yellow: #F2C230;
+  --color-bright-yellow: #FFF200;
+  --color-ink: #0E0E0E;
+  --color-cream: #F8F5E8;
+  --color-navy: #0B3A5E;
+
+  --font-heading: 'Outfit Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: 'Inter Variable', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  --radius-card-sm: 24px;
+  --radius-card: 32px;
+  --radius-card-lg: 40px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F8F5E8;
+    color: #0E0E0E;
+    font-family: var(--font-body);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #F8F5E8;
+    color: #0E0E0E;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #F2C230;
+    color: #0E0E0E;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom utility for rotating badge animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin-slow {
+    animation: none;
+  }
+}
+
+/* Focus styles using navy */
+:focus-visible {
+  outline: 2px solid #0B3A5E;
+  outline-offset: 2px;
+}
