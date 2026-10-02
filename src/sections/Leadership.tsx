@@ -9,7 +9,7 @@ export const Leadership: React.FC = () => {
   return (
     <section
       id="leadership"
-      aria-label="Leadership - M/S Chakravarthy Constructions"
+      aria-label="Leadership - Chakravarthy Constructions"
       className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <motion.div
@@ -121,7 +121,7 @@ export const Leadership: React.FC = () => {
                     }`}
                   >
                     <span>M/S Chakravarthy</span>
-                    <span>Anantapur, AP</span>
+                    <span>Anantapur · Hyderabad</span>
                   </div>
                 </div>
               </ParallaxTiltCard>

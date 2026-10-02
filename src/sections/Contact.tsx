@@ -45,6 +45,8 @@ export const Contact: React.FC = () => {
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
+  const [activeOffice, setActiveOffice] = useState(0);
+  const mapOffice = siteData.offices[activeOffice];
 
   const validate = (): boolean => {
     const errs: FormErrors = {};
@@ -78,7 +80,7 @@ export const Contact: React.FC = () => {
   };
 
   const buildWhatsAppText = () => {
-    return `Hello M/S Chakravarthy Constructions,\n\nI would like to inquire about: *${formData.service}*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Message:* ${formData.message}\n\nSubmitted via website: mschakravarthyconstructions.com`;
+    return `Hello Chakravarthy Constructions,\n\nI would like to inquire about: *${formData.service}*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Message:* ${formData.message}\n\nSubmitted via website: mschakravarthyconstructions.com`;
   };
 
   const buildMailtoUrl = () => {
@@ -111,7 +113,7 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      aria-label="Contact M/S Chakravarthy Constructions"
+      aria-label="Contact Chakravarthy Constructions"
       className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <motion.div
@@ -128,7 +130,7 @@ export const Contact: React.FC = () => {
           </h2>
         </div>
         <p className="text-neutral-600 text-xs sm:text-sm max-w-sm font-medium leading-relaxed">
-          Reach our registered office in Anantapur for site assessments, tender inquiries, and infrastructure partnerships.
+          Reach our Hyderabad head office or Anantapur branch for tender inquiries, EPC subcontract packages, and site assessments.
         </p>
       </motion.div>
 
@@ -259,7 +261,7 @@ export const Contact: React.FC = () => {
                 >
                   {siteData.services.map((s) => (
                     <option key={s.id} value={s.name}>
-                      {s.name} ({s.tagline})
+                      {s.shortName}
                     </option>
                   ))}
                   <option value="General Civil Infrastructure">General Civil Infrastructure</option>
@@ -332,7 +334,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <div>
                   <div className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider">
-                    Direct Phone &amp; WhatsApp
+                    {siteData.contactLines[0].label} · WhatsApp
                   </div>
                   <a
                     href={siteData.phone.tel}
@@ -353,6 +355,22 @@ export const Contact: React.FC = () => {
               </button>
             </div>
 
+            {siteData.contactLines.slice(1).map((line) => (
+              <div key={line.tel} className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-50 border border-black/5">
+                <div className="w-8 h-8 rounded-full bg-[#C8102E] text-white flex items-center justify-center shrink-0">
+                  <Phone className="w-3.5 h-3.5" />
+                </div>
+                <div>
+                  <div className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider">
+                    {line.label}
+                  </div>
+                  <a href={line.tel} className="text-sm sm:text-base font-bold text-[#0F172A] hover:text-[#C8102E]">
+                    {line.display}
+                  </a>
+                </div>
+              </div>
+            ))}
+
             <div className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-50 border border-black/5">
               <div className="w-8 h-8 rounded-full bg-[#0F172A] text-white flex items-center justify-center shrink-0">
                 <Mail className="w-3.5 h-3.5 text-red-400" />
@@ -370,19 +388,29 @@ export const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="flex items-start gap-2.5 p-3 rounded-xl bg-neutral-50 border border-black/5">
-              <div className="w-8 h-8 rounded-full bg-[#0B3A5E] text-white flex items-center justify-center shrink-0 mt-0.5">
-                <MapPin className="w-3.5 h-3.5" />
-              </div>
-              <div>
-                <div className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider">
-                  Registered Headquarters
+            {siteData.offices.map((office, idx) => (
+              <button
+                key={office.type}
+                type="button"
+                onClick={() => setActiveOffice(idx)}
+                aria-pressed={activeOffice === idx}
+                className={`w-full text-left flex items-start gap-2.5 p-3 rounded-xl border transition-colors ${
+                  activeOffice === idx ? 'bg-[#C8102E]/10 border-[#C8102E]' : 'bg-neutral-50 border-black/5 hover:border-black/15'
+                }`}
+              >
+                <div className="w-8 h-8 rounded-full bg-[#0F172A] text-white flex items-center justify-center shrink-0 mt-0.5">
+                  <MapPin className="w-3.5 h-3.5 text-red-400" />
                 </div>
-                <p className="text-xs font-semibold text-[#0E0E0E] mt-0.5 leading-snug">
-                  {siteData.address.full}
-                </p>
-              </div>
-            </div>
+                <div>
+                  <div className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider">
+                    {office.type} · {office.state}
+                  </div>
+                  <p className="text-xs font-semibold text-[#0F172A] mt-0.5 leading-snug">
+                    {office.full}
+                  </p>
+                </div>
+              </button>
+            ))}
           </div>
 
           {/* Working Hours with Live IST Status Badge */}
@@ -433,8 +461,9 @@ export const Contact: React.FC = () => {
           {/* Google Maps Embed */}
           <div className="rounded-[24px] overflow-hidden border border-black/10 shadow-sm bg-neutral-200 h-[190px] relative">
             <iframe
-              title="M/S Chakravarthy Constructions Office Location"
-              src="https://maps.google.com/maps?q=Dwaraka%20Nagar,%20Anantapur,%20Andhra%20Pradesh%20515004&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              key={mapOffice.mapQuery}
+              title={`${siteData.name} ${mapOffice.type} Location`}
+              src={`https://maps.google.com/maps?q=${encodeURIComponent(mapOffice.mapQuery)}&t=&z=14&ie=UTF8&iwloc=&output=embed`}
               className="w-full h-full border-0"
               loading="lazy"
               allowFullScreen

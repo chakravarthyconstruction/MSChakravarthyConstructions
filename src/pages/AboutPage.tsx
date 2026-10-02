@@ -45,7 +45,7 @@ export const AboutPage: React.FC = () => {
               <span>Special Class Contractor</span>
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-xs font-mono font-bold tracking-wider">
-              <span>Headquartered in Anantapur, AP</span>
+              <span>Head Office: Kukatpally, Hyderabad · Branch: Anantapur</span>
             </span>
           </div>
         </motion.div>
@@ -68,13 +68,13 @@ export const AboutPage: React.FC = () => {
             </h2>
             <div className="space-y-3 text-neutral-700 text-xs sm:text-sm leading-relaxed">
               <p className="font-medium text-[#0F172A]/90">
-                Operating with deep roots in Anantapur, Andhra Pradesh, M/S Chakravarthy Constructions has grown through three successive generations of civil engineering leaders.
+                Operating across Andhra Pradesh, Telangana, and Karnataka with corporate presence in Hyderabad and regional headquarters in Anantapur, M/S Chakravarthy Constructions builds on a proud family practice in civil engineering and infrastructure spanning more than two decades across three generations.
               </p>
               <p>
-                Under the strategic direction of Managing Director Mr. D. Chakravarthy and Chairman Mr. D. Nagaraju, our project execution spans major highway corridors, bulk earth works, irrigation canal networks, earthen water reservoirs, and stone check dams across Andhra Pradesh, Karnataka, and Telangana.
+                Under Chairman &amp; Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm has delivered reservoir formations in Adilabad, the Sarala Sagar modernization in Mahabubnagar, World Bank-assisted tank rehabilitation in Ananthapuramu, and today executes rock and earthworks on the 500 MW Chitravathi pumped storage project, major highways, and NHAI greenfield corridors.
               </p>
               <p>
-                Our philosophy balances time-tested structural safety protocols with modern heavy machinery mobilization, ensuring that public works and civil investments serve regional communities for decades to come.
+                The firm's audited net worth stands at ₹3,10,79,450/- (29-04-2025) with 10-year contract receipts of ₹26.50+ Crores, reaching ₹6.55 Crores in FY 2024-25.
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export const AboutPage: React.FC = () => {
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
                 <HardHat className="w-4 h-4 text-[#C8102E] mb-1.5" />
                 <h4 className="text-xs font-bold text-[#0F172A] font-heading">3 Key States</h4>
-                <p className="text-[11px] text-neutral-500 mt-0.5">AP, Karnataka &amp; Telangana</p>
+                <p className="text-[11px] text-neutral-500 mt-0.5">AP, Telangana &amp; Karnataka</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">

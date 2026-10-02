@@ -73,13 +73,13 @@ export const Navbar: React.FC = () => {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center gap-1 lg:gap-1.5 bg-black/[0.03] p-1 rounded-full border border-black/5">
+            <div className="hidden lg:flex items-center gap-1 bg-black/[0.03] p-1 rounded-full border border-black/5">
               {siteData.navLinks.map((link) => (
                 <NavLink
                   key={link.label}
                   to={link.href}
                   className={({ isActive }) =>
-                    `px-4 py-1.5 rounded-full text-xs lg:text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] ${
+                    `px-3 xl:px-4 py-1.5 rounded-full text-xs lg:text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] ${
                       isActive
                         ? 'bg-[#C8102E] text-white shadow-sm'
                         : 'text-[#0F172A]/80 hover:text-[#C8102E] hover:bg-black/5'
@@ -108,7 +108,7 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden w-10 h-10 rounded-full bg-[#0F172A] text-white flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]"
+                className="lg:hidden w-10 h-10 rounded-full bg-[#0F172A] text-white flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]"
                 aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
                 aria-expanded={mobileMenuOpen}
               >
@@ -127,7 +127,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 bg-[#F8FAFC] flex flex-col justify-between pt-24 pb-8 px-6 md:hidden overflow-y-auto"
+            className="fixed inset-0 z-40 bg-[#F8FAFC] flex flex-col justify-between pt-24 pb-8 px-6 lg:hidden overflow-y-auto"
           >
             <div className="flex flex-col gap-3">
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-neutral-400">Navigation</span>
@@ -177,9 +177,11 @@ export const Navbar: React.FC = () => {
               </a>
 
               <div className="text-center mt-2">
-                <p className="text-xs text-neutral-500 font-medium">
-                  {siteData.address.full}
-                </p>
+                {siteData.offices.map((office) => (
+                  <p key={office.type} className="text-xs text-neutral-500 font-medium">
+                    {office.type}: {office.city}, {office.state}
+                  </p>
+                ))}
                 <p className="text-xs text-neutral-600 font-semibold mt-1">
                   {siteData.hours.days}: {siteData.hours.timing}
                 </p>

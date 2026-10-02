@@ -13,7 +13,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      aria-label="Hero - M/S Chakravarthy Constructions"
+      aria-label="Hero - Chakravarthy Constructions"
       className="relative pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
@@ -132,6 +132,8 @@ export const Hero: React.FC = () => {
                   <CountUpStat
                     value={stat.value}
                     suffix={stat.suffix}
+                    prefix={stat.prefix}
+                    decimals={stat.decimals}
                     label={stat.label}
                     valueClassName="text-xl sm:text-2xl lg:text-3xl text-white font-black"
                     labelClassName="text-[10px] sm:text-[11px] text-neutral-300 font-medium leading-tight"

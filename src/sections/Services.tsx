@@ -5,7 +5,6 @@ import { ArrowUpRight, Sparkles, Camera } from 'lucide-react';
 import { siteData } from '../data/site';
 import { SectionEyebrow } from '../components/SectionEyebrow';
 import { ServiceScene3D } from '../components/ServiceScene3D';
-import type { ServiceId } from '../components/ServiceScene3D';
 
 export const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -84,7 +83,7 @@ export const Services: React.FC = () => {
                           isActive ? 'text-red-400' : 'text-white group-hover:text-neutral-200'
                         }`}
                       >
-                        {service.name}
+                        {service.shortName}
                       </h3>
                       <p className="text-neutral-400 text-xs sm:text-sm mt-1 max-w-sm leading-relaxed">
                         {service.description}
@@ -159,7 +158,7 @@ export const Services: React.FC = () => {
                     className="w-full h-full"
                   >
                     <ServiceScene3D
-                      serviceId={activeService.id as ServiceId}
+                      serviceId={activeService.scene}
                       className="w-full h-full rounded-[26px] border-0"
                     />
                   </motion.div>
@@ -211,7 +210,7 @@ export const Services: React.FC = () => {
               {/* 3D Scene embedded directly for mobile */}
               <div className="h-[280px] w-full">
                 <ServiceScene3D
-                  serviceId={service.id as ServiceId}
+                  serviceId={service.scene}
                   className="w-full h-full rounded-t-[22px] rounded-b-none border-0"
                   showControls={false}
                 />
@@ -227,7 +226,7 @@ export const Services: React.FC = () => {
                       {service.number}
                     </span>
                   </div>
-                  <h3 className="text-lg font-bold font-heading text-white">{service.name}</h3>
+                  <h3 className="text-lg font-bold font-heading text-white">{service.shortName}</h3>
                   <p className="text-xs text-neutral-300 leading-relaxed mt-1">
                     {service.description}
                   </p>

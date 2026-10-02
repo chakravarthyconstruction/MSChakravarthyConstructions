@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ArrowUp, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { siteData } from '../data/site';
 import { LogoBadge } from '../components/LogoBadge';
 
@@ -88,26 +88,79 @@ export const Footer: React.FC = () => {
               Contact Desk
             </h4>
             <ul className="space-y-2.5 text-xs text-slate-300">
-              <li className="flex items-start gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
-                <a href={siteData.phone.tel} className="hover:text-white transition-colors font-medium">
-                  {siteData.phone.display}
-                </a>
-              </li>
+              {siteData.contactLines ? (
+                siteData.contactLines.map((line) => (
+                  <li key={line.tel} className="flex items-start gap-2">
+                    <Phone className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
+                    <a href={line.tel} className="hover:text-white transition-colors font-medium" aria-label={`${line.label}: ${line.display}`}>
+                      {line.display}
+                    </a>
+                  </li>
+                ))
+              ) : (
+                <li className="flex items-start gap-2">
+                  <Phone className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
+                  <a href={siteData.phone.tel} className="hover:text-white transition-colors font-medium">
+                    {siteData.phone.display}
+                  </a>
+                </li>
+              )}
               <li className="flex items-start gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
                 <a href={`mailto:${siteData.email}`} className="hover:text-white transition-colors break-all font-medium">
                   {siteData.email}
                 </a>
               </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
-                <span className="leading-snug">
-                  1-410, 1st Road Ext., Dwaraka Nagar, Anantapur - 515004
-                </span>
-              </li>
+              {siteData.offices ? (
+                siteData.offices.map((office) => (
+                  <li key={office.type} className="flex items-start gap-2">
+                    <MapPin className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
+                    <span className="leading-snug">
+                      <span className="block text-slate-200 font-semibold">{office.type}</span>
+                      {office.line2}, {office.city} – {office.pincode}
+                    </span>
+                  </li>
+                ))
+              ) : (
+                <li className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-[#C8102E] shrink-0 mt-0.5" />
+                  <span className="leading-snug">
+                    1-410, 1st Road Ext., Dwaraka Nagar, Anantapur - 515004
+                  </span>
+                </li>
+              )}
             </ul>
           </div>
+        </div>
+
+        {/* Statutory Identifiers */}
+        <div className="py-6 border-b border-white/10">
+          <h4 className="flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.22em] text-red-400 uppercase mb-4">
+            <ShieldCheck className="w-3.5 h-3.5 text-red-400" />
+            Statutory Identifiers
+          </h4>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3 text-xs">
+            {[
+              { k: 'Contractor Status', v: `${siteData.corporate.firmRegistration} · ${siteData.corporate.constitution}` },
+              { k: 'PAN', v: siteData.corporate.pan },
+              ...siteData.corporate.gst.map((g) => ({ k: `GSTIN (${g.state})`, v: g.gstin })),
+              { k: 'MSME Udyam', v: `${siteData.corporate.msme.udyam} · ${siteData.corporate.msme.category}` },
+              ...siteData.corporate.contractorRegistrations.map((r) => ({
+                k: `${r.classification} — ${r.authority.replace('Government of ', 'Govt. of ')}`,
+                v: r.number,
+              })),
+            ].map((item) => (
+              <div key={item.k} className="min-w-0">
+                <dt className="text-neutral-500 font-medium">{item.k}</dt>
+                <dd className="text-neutral-200 font-mono font-semibold break-words">{item.v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-5 text-[11px] text-neutral-500 leading-relaxed max-w-4xl">
+            Disclosure: Only firm-level statutory identifiers are published on this website. Personal identity numbers of partners,
+            bank account details and internal commercial schedules are withheld. Project values shown are as ordered or certified by the
+            respective clients; copies of certificates are furnished on request for tender and subcontract evaluation.
+          </p>
         </div>
 
         {/* Bottom Bar */}

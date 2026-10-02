@@ -3,6 +3,8 @@ import React, { useEffect, useState, useRef } from 'react';
 interface CountUpStatProps {
   value: number;
   suffix?: string;
+  prefix?: string;
+  decimals?: number;
   label: string;
   duration?: number;
   className?: string;
@@ -13,6 +15,8 @@ interface CountUpStatProps {
 export const CountUpStat: React.FC<CountUpStatProps> = ({
   value,
   suffix = '',
+  prefix = '',
+  decimals = 0,
   label,
   duration = 1400,
   className = '',
@@ -48,7 +52,8 @@ export const CountUpStat: React.FC<CountUpStatProps> = ({
             const progress = Math.min((timestamp - startTimestamp) / duration, 1);
             // Ease out cubic
             const easeOutProgress = 1 - Math.pow(1 - progress, 3);
-            const currentVal = Math.floor(easeOutProgress * value);
+            const factor = Math.pow(10, decimals);
+            const currentVal = Math.floor(easeOutProgress * value * factor) / factor;
             setCount(currentVal);
 
             if (progress < 1) {
@@ -66,16 +71,17 @@ export const CountUpStat: React.FC<CountUpStatProps> = ({
 
     observer.observe(element);
     return () => observer.disconnect();
-  }, [value, duration, hasAnimated]);
+  }, [value, duration, decimals, hasAnimated]);
 
   return (
     <div ref={containerRef} className={`flex flex-col ${className}`}>
       <div
         className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading ${valueClassName}`}
       >
-        <span>{count}</span>
-        {suffix && <span>{suffix}</span>}
-        <span className="text-[#C8102E] ml-0.5">+</span>
+        {prefix && <span>{prefix}</span>}
+        <span>{decimals > 0 ? count.toFixed(decimals) : count}</span>
+        {suffix && <span className="text-[#C8102E] ml-0.5">{suffix}</span>}
+        {!suffix && <span className="text-[#C8102E] ml-0.5">+</span>}
       </div>
       <div className={`text-xs sm:text-sm font-medium opacity-80 mt-1 leading-snug ${labelClassName}`}>
         {label}
