@@ -34,7 +34,7 @@ export const CTABanner: React.FC = () => {
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           className="relative z-10 p-6 sm:p-10 lg:p-12 max-w-2xl flex flex-col items-start"
         >
-          <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.22em] text-[#FFF200] uppercase mb-3">
+          <span className="text-[11px] sm:text-xs font-mono font-bold tracking-[0.22em] text-red-400 uppercase mb-3">
             CIVIL ENGINEERING EXCELLENCE
           </span>
 

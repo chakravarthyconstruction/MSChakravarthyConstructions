@@ -36,7 +36,7 @@ export const FAQ: React.FC = () => {
         >
           <div>
             <SectionEyebrow label="QUESTIONS & ANSWERS" className="mb-3" />
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] tracking-tight font-heading leading-tight mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] tracking-tight font-heading leading-tight mb-4">
               Got Questions? We Have You Covered.
             </h2>
             <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed mb-6">
@@ -45,8 +45,8 @@ export const FAQ: React.FC = () => {
           </div>
 
           <div className="bg-white/80 p-5 sm:p-6 rounded-[24px] border border-black/5 shadow-sm">
-            <div className="flex items-center gap-2.5 mb-1.5 text-[#0E0E0E] font-bold text-sm">
-              <HelpCircle className="w-4 h-4 text-[#F2C230]" />
+            <div className="flex items-center gap-2.5 mb-1.5 text-[#0F172A] font-bold text-sm">
+              <HelpCircle className="w-4 h-4 text-[#C8102E]" />
               <span>Need specific tender details?</span>
             </div>
             <p className="text-neutral-600 text-xs mb-3">
@@ -54,7 +54,7 @@ export const FAQ: React.FC = () => {
             </p>
             <Link
               to="/contact"
-              className="text-xs font-bold uppercase tracking-wider text-[#0E0E0E] hover:underline flex items-center gap-1.5"
+              className="text-xs font-bold uppercase tracking-wider text-[#0F172A] hover:text-[#C8102E] flex items-center gap-1.5 transition-colors"
             >
               <span>Contact Project Office</span>
               <span>→</span>
@@ -85,14 +85,14 @@ export const FAQ: React.FC = () => {
                   aria-controls={contentId}
                   onClick={() => toggleAccordion(index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
-                  className="w-full px-5 sm:px-6 py-4 sm:py-4.5 text-left flex items-center justify-between gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E] cursor-pointer"
+                  className="w-full px-5 sm:px-6 py-4 sm:py-4.5 text-left flex items-center justify-between gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] cursor-pointer"
                 >
-                  <span className="font-bold text-sm sm:text-base text-[#0E0E0E] font-heading pr-2">
+                  <span className="font-bold text-sm sm:text-base text-[#0F172A] font-heading pr-2">
                     {faq.question}
                   </span>
                   <span
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors duration-200 ${
-                      isOpen ? 'bg-[#0E0E0E] text-[#FFF200]' : 'bg-neutral-100 text-[#0E0E0E]'
+                      isOpen ? 'bg-[#C8102E] text-white' : 'bg-slate-100 text-[#0F172A]'
                     }`}
                   >
                     {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}

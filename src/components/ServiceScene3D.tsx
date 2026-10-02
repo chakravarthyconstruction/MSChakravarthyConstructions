@@ -350,8 +350,8 @@ export const ServiceScene3D: React.FC<ServiceScene3DProps> = ({
       {/* Top HUD Overlay */}
       <div className="relative z-10 p-4 sm:p-5 flex items-center justify-between pointer-events-none">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#FFF200] animate-ping" />
-          <span className="text-[11px] font-mono font-bold tracking-widest text-[#FFF200] uppercase">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#C8102E] animate-ping" />
+          <span className="text-[11px] font-mono font-bold tracking-widest text-red-400 uppercase">
             {meta.badge}
           </span>
         </div>
@@ -365,7 +365,7 @@ export const ServiceScene3D: React.FC<ServiceScene3DProps> = ({
               aria-label={isPlaying ? 'Pause 3D Simulation' : 'Play 3D Simulation'}
               className="p-1.5 rounded-full text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
             >
-              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 text-[#FFF200]" />}
+              {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 text-red-400" />}
             </button>
 
             <button
@@ -373,7 +373,7 @@ export const ServiceScene3D: React.FC<ServiceScene3DProps> = ({
               onClick={() => setIsWireframe((prev) => !prev)}
               aria-label="Toggle Wireframe"
               className={`p-1.5 rounded-full transition-colors ${
-                isWireframe ? 'bg-[#F2C230] text-[#0E0E0E]' : 'text-neutral-300 hover:text-white hover:bg-white/10'
+                isWireframe ? 'bg-[#C8102E] text-white' : 'text-neutral-300 hover:text-white hover:bg-white/10'
               }`}
             >
               <RotateCw className="w-3.5 h-3.5" />
@@ -388,7 +388,7 @@ export const ServiceScene3D: React.FC<ServiceScene3DProps> = ({
           <span className="font-semibold text-neutral-300 truncate max-w-[280px] sm:max-w-none">
             {meta.title}
           </span>
-          <span className="flex items-center gap-1 text-[#FFF200] shrink-0">
+          <span className="flex items-center gap-1 text-red-400 shrink-0">
             <Eye className="w-3 h-3" />
             <span>Drag to Orbit 360°</span>
           </span>

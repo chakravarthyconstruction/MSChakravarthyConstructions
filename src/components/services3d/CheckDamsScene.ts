@@ -47,7 +47,7 @@ export function buildCheckDamsScene(
   worldGroup.add(rightFlank);
 
   // 2. Stepped Gravity Stone Masonry Check Dam Wall
-  // Base Wall (Tier 1)
+  // Base Wall (Level 1)
   const baseDamGeo = new THREE.BoxGeometry(14, 1.6, 4.2);
   const stoneMat = new THREE.MeshStandardMaterial({
     map: stoneTex,

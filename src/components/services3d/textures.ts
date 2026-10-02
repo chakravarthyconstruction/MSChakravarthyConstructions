@@ -102,8 +102,8 @@ export function createAsphaltTexture(): THREE.CanvasTexture {
   ctx.lineTo(180, 512);
   ctx.stroke();
 
-  // Center double yellow median lines
-  ctx.strokeStyle = '#f2c230';
+  // Center double white median lines
+  ctx.strokeStyle = '#ffffff';
   ctx.lineWidth = 8;
   ctx.setLineDash([]);
   ctx.beginPath();

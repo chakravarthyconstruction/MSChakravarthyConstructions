@@ -14,7 +14,7 @@ export const SectionEyebrow: React.FC<SectionEyebrowProps> = ({
   return (
     <div
       className={`inline-flex items-center gap-2 text-xs md:text-sm font-bold tracking-[0.22em] uppercase select-none ${
-        dark ? 'text-[#F2C230]' : 'text-neutral-600'
+        dark ? 'text-[#F87171]' : 'text-[#C8102E]'
       } ${className}`}
     >
       <span className="opacity-60">—</span>

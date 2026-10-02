@@ -17,17 +17,17 @@ export const RotatingTextBadge: React.FC<RotatingTextBadgeProps> = ({
   return (
     <div
       style={{ width: `${size}px`, height: `${size}px` }}
-      className={`relative inline-flex items-center justify-center rounded-full bg-[#F8F5E8] shadow-[0_12px_36px_rgba(0,0,0,0.12)] p-1.5 select-none ${className}`}
-      aria-label="Core services badge: Roads, Canals, Reservoirs, Check Dams"
+      className={`relative inline-flex items-center justify-center rounded-full bg-white shadow-[0_12px_36px_rgba(200,16,46,0.12)] p-1.5 select-none ${className}`}
+      aria-label="Core services badge: Highways, Earth Works, Canals, Reservoirs, Check Dams"
     >
       {/* Outer subtle ring border */}
-      <div className="absolute inset-0 rounded-full border border-black/10 pointer-events-none" />
+      <div className="absolute inset-0 rounded-full border border-[#C8102E]/20 pointer-events-none" />
 
       {/* Rotating SVG with curved circular text */}
       <div className="w-full h-full animate-spin-slow">
         <svg
           viewBox="0 0 200 200"
-          className="w-full h-full fill-current text-[#0E0E0E]"
+          className="w-full h-full fill-current text-[#C8102E]"
           aria-hidden="true"
         >
           <path
@@ -36,7 +36,7 @@ export const RotatingTextBadge: React.FC<RotatingTextBadgeProps> = ({
             fill="none"
           />
           <text
-            className="text-[13px] font-bold tracking-[0.24em] uppercase"
+            className="text-[13px] font-extrabold tracking-[0.22em] uppercase"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             <textPath href="#textBadgeCircle" startOffset="0%">
@@ -48,8 +48,8 @@ export const RotatingTextBadge: React.FC<RotatingTextBadgeProps> = ({
 
       {/* Center Logo Badge */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="rounded-full p-1 bg-[#F8F5E8] shadow-inner">
-          <LogoBadge size={centerSize} className="shadow-md" />
+        <div className="rounded-full p-1 bg-white shadow-md ring-1 ring-[#C8102E]/15">
+          <LogoBadge size={centerSize} className="shadow-sm" />
         </div>
       </div>
     </div>

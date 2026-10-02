@@ -135,7 +135,7 @@ export function buildRoadsScene(
   sCtx.fillStyle = '#ffffff';
   sCtx.font = 'bold 26px sans-serif';
   sCtx.fillText('NH-44 EXPRESS CORRIDOR', 30, 55);
-  sCtx.fillStyle = '#f2c230';
+  sCtx.fillStyle = '#ffffff';
   sCtx.font = 'bold 22px monospace';
   sCtx.fillText('HYDERABAD ◀ 280 KM  |  BENGALURU 160 KM ▶', 30, 110);
 

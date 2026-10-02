@@ -85,9 +85,9 @@ export const BlueprintInspector: React.FC<BlueprintInspectorProps> = ({
         />
 
         {/* Blueprint HUD Telemetry */}
-        <div className="absolute top-4 left-4 font-mono text-[10px] text-[#FFF200] space-y-1 bg-black/75 px-3 py-1.5 rounded-lg border border-[#FFF200]/30 backdrop-blur-md">
+        <div className="absolute top-4 left-4 font-mono text-[10px] text-red-400 space-y-1 bg-black/75 px-3 py-1.5 rounded-lg border border-red-500/30 backdrop-blur-md">
           <div className="flex items-center gap-1.5 font-bold">
-            <Scan className="w-3 h-3 text-[#FFF200] animate-spin" />
+            <Scan className="w-3 h-3 text-[#C8102E] animate-spin" />
             <span>CAD SCHEMATIC ANALYSIS</span>
           </div>
           <div>STRATA DENSITY: 2.45 t/m³</div>
@@ -97,11 +97,11 @@ export const BlueprintInspector: React.FC<BlueprintInspectorProps> = ({
 
       {/* Vertical Laser Divider Line */}
       <div
-        className="absolute top-0 bottom-0 w-[3px] bg-[#FFF200] shadow-[0_0_15px_#FFF200] pointer-events-none z-20"
+        className="absolute top-0 bottom-0 w-[3px] bg-[#C8102E] shadow-[0_0_15px_#C8102E] pointer-events-none z-20"
         style={{ left: `${sliderPos}%` }}
       >
         {/* Center Drag Handle */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#0E0E0E] border-2 border-[#FFF200] text-[#FFF200] shadow-xl flex items-center justify-center pointer-events-auto cursor-ew-resize">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[#0F172A] border-2 border-[#C8102E] text-[#C8102E] shadow-xl flex items-center justify-center pointer-events-auto cursor-ew-resize">
           <Sliders className="w-4 h-4 rotate-90" />
         </div>
       </div>
@@ -109,8 +109,8 @@ export const BlueprintInspector: React.FC<BlueprintInspectorProps> = ({
       {/* Floating Badges */}
       <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white text-xs font-semibold pointer-events-none z-10">
         <div className="flex items-center gap-2">
-          <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md font-mono text-[11px] text-[#FFF200] border border-white/10 flex items-center gap-1.5">
-            <Layers className="w-3 h-3" />
+          <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md font-mono text-[11px] text-red-400 border border-white/10 flex items-center gap-1.5">
+            <Layers className="w-3 h-3 text-[#C8102E]" />
             <span>{category}</span>
           </span>
           <span className="hidden sm:inline-block font-mono text-[11px] text-neutral-300">

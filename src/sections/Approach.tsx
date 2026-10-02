@@ -33,7 +33,7 @@ export const Approach: React.FC = () => {
       >
         <div>
           <SectionEyebrow label="OUR APPROACH" className="mb-3" />
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] tracking-tight font-heading max-w-xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] tracking-tight font-heading max-w-xl leading-tight">
             Systematic Methodology From Survey to Commissioning
           </h2>
         </div>
@@ -55,16 +55,16 @@ export const Approach: React.FC = () => {
           >
             <div>
               <div className="flex items-center justify-between mb-5">
-                <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#0E0E0E] text-[#FFF200]">
+                <span className="text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-[#0F172A] text-white">
                   Step {step.number}
                 </span>
 
-                <div className="w-8 h-8 rounded-full bg-neutral-100 text-[#0E0E0E] flex items-center justify-center group-hover:bg-[#F2C230] transition-colors">
+                <div className="w-8 h-8 rounded-full bg-slate-100 text-[#0F172A] flex items-center justify-center group-hover:bg-[#C8102E] group-hover:text-white transition-colors">
                   {renderStepIcon(index)}
                 </div>
               </div>
 
-              <h3 className="text-lg sm:text-xl font-bold text-[#0E0E0E] font-heading tracking-tight mb-2">
+              <h3 className="text-lg sm:text-xl font-bold text-[#0F172A] font-heading tracking-tight mb-2">
                 {step.title}
               </h3>
               <p className="text-neutral-600 text-xs sm:text-sm leading-relaxed">
@@ -76,7 +76,7 @@ export const Approach: React.FC = () => {
               <span className="text-[10px] font-mono font-semibold text-neutral-400">Phase 0{index + 1} of 04</span>
               <div className="flex-1 h-1 bg-neutral-100 rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-[#F2C230] rounded-full transition-all duration-500 group-hover:bg-[#0E0E0E]"
+                  className="h-full bg-[#C8102E] rounded-full transition-all duration-500 group-hover:bg-[#0F172A]"
                   style={{ width: `${(index + 1) * 25}%` }}
                 />
               </div>

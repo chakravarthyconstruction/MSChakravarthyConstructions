@@ -1,5 +1,6 @@
 import React from 'react';
 import { Hero } from '../sections/Hero';
+import { SitePhotoScroll } from '../components/SitePhotoScroll';
 import { About } from '../sections/About';
 import { Services } from '../sections/Services';
 import { InteractiveSimulation } from '../sections/InteractiveSimulation';
@@ -14,6 +15,7 @@ export const HomePage: React.FC = () => {
   return (
     <>
       <Hero />
+      <SitePhotoScroll />
       <About />
       <Services />
       <InteractiveSimulation />

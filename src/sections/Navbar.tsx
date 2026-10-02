@@ -51,19 +51,19 @@ export const Navbar: React.FC = () => {
             aria-label="Main Navigation"
             className={`w-full flex items-center justify-between rounded-full transition-all duration-300 px-3.5 sm:px-5 py-2 sm:py-2.5 ${
               isScrolled
-                ? 'bg-[#F8F5E8]/90 backdrop-blur-xl border border-black/10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]'
+                ? 'bg-[#F8FAFC]/90 backdrop-blur-xl border border-black/10 shadow-[0_8px_30px_rgba(0,0,0,0.08)]'
                 : 'bg-white/80 backdrop-blur-md border border-black/5 shadow-[0_4px_20px_rgba(0,0,0,0.04)]'
             }`}
           >
             {/* Logo Badge + Wordmark */}
             <Link
               to="/"
-              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E] rounded-full pr-2"
+              className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] rounded-full pr-2"
               aria-label="M/S Chakravarthy Constructions Homepage"
             >
               <LogoBadge size={isScrolled ? 38 : 42} className="transition-transform group-hover:scale-105 shrink-0" />
               <div className="flex flex-col">
-                <span className="font-black text-sm sm:text-base tracking-tight font-heading leading-tight text-[#0E0E0E]">
+                <span className="font-black text-sm sm:text-base tracking-tight font-heading leading-tight text-[#0F172A]">
                   M/S Chakravarthy
                 </span>
                 <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.24em] text-neutral-600 uppercase leading-none mt-0.5">
@@ -79,10 +79,10 @@ export const Navbar: React.FC = () => {
                   key={link.label}
                   to={link.href}
                   className={({ isActive }) =>
-                    `px-4 py-1.5 rounded-full text-xs lg:text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E] ${
+                    `px-4 py-1.5 rounded-full text-xs lg:text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] ${
                       isActive
-                        ? 'bg-[#0E0E0E] text-white shadow-sm'
-                        : 'text-[#0E0E0E]/80 hover:text-[#0E0E0E] hover:bg-black/5'
+                        ? 'bg-[#C8102E] text-white shadow-sm'
+                        : 'text-[#0F172A]/80 hover:text-[#C8102E] hover:bg-black/5'
                     }`
                   }
                 >
@@ -95,11 +95,11 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-2 sm:gap-3">
               <a
                 href={siteData.phone.tel}
-                className="hidden sm:inline-flex items-center gap-2.5 bg-[#0E0E0E] hover:bg-black text-white pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E]"
+                className="hidden sm:inline-flex items-center gap-2.5 bg-[#0F172A] hover:bg-black text-white pl-4 pr-1.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 shadow-sm hover:shadow group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]"
                 aria-label={`Call ${siteData.phone.display}`}
               >
                 <span>Call Now</span>
-                <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#F2C230] text-[#0E0E0E] flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-105">
+                <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C8102E] text-white flex items-center justify-center transition-transform duration-300 group-hover:rotate-12 group-hover:scale-105 shadow-sm">
                   <Phone className="w-3.5 h-3.5" />
                 </span>
               </a>
@@ -108,7 +108,7 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden w-10 h-10 rounded-full bg-[#0E0E0E] text-white flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E]"
+                className="md:hidden w-10 h-10 rounded-full bg-[#0F172A] text-white flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]"
                 aria-label={mobileMenuOpen ? 'Close Menu' : 'Open Menu'}
                 aria-expanded={mobileMenuOpen}
               >
@@ -127,7 +127,7 @@ export const Navbar: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25, ease: 'easeInOut' }}
-            className="fixed inset-0 z-40 bg-[#F8F5E8] flex flex-col justify-between pt-24 pb-8 px-6 md:hidden overflow-y-auto"
+            className="fixed inset-0 z-40 bg-[#F8FAFC] flex flex-col justify-between pt-24 pb-8 px-6 md:hidden overflow-y-auto"
           >
             <div className="flex flex-col gap-3">
               <span className="text-xs font-bold tracking-[0.2em] uppercase text-neutral-400">Navigation</span>
@@ -144,7 +144,7 @@ export const Navbar: React.FC = () => {
                       onClick={handleLinkClick}
                       className={({ isActive }) =>
                         `text-2xl font-bold font-heading py-2 border-b border-black/5 flex items-center justify-between transition-colors ${
-                          isActive ? 'text-[#F2C230] font-extrabold' : 'text-[#0E0E0E] hover:text-[#F2C230]'
+                          isActive ? 'text-[#C8102E] font-extrabold' : 'text-[#0F172A] hover:text-[#C8102E]'
                         }`
                       }
                     >
@@ -160,9 +160,9 @@ export const Navbar: React.FC = () => {
             <div className="flex flex-col gap-4 mt-8 pt-6 border-t border-black/10">
               <a
                 href={siteData.phone.tel}
-                className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-full bg-[#0E0E0E] text-white font-bold text-base shadow"
+                className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-full bg-[#0F172A] text-white font-bold text-base shadow"
               >
-                <Phone className="w-4 h-4 text-[#F2C230]" />
+                <Phone className="w-4 h-4 text-[#C8102E]" />
                 <span>Call {siteData.phone.display}</span>
               </a>
 
@@ -170,7 +170,7 @@ export const Navbar: React.FC = () => {
                 href={siteData.phone.whatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-full bg-[#F2C230] text-[#0E0E0E] font-bold text-base shadow"
+                className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-full bg-[#C8102E] text-white font-bold text-base shadow"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>Chat on WhatsApp</span>

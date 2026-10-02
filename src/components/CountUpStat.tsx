@@ -75,7 +75,7 @@ export const CountUpStat: React.FC<CountUpStatProps> = ({
       >
         <span>{count}</span>
         {suffix && <span>{suffix}</span>}
-        <span className="text-[#FFF200] ml-0.5">+</span>
+        <span className="text-[#C8102E] ml-0.5">+</span>
       </div>
       <div className={`text-xs sm:text-sm font-medium opacity-80 mt-1 leading-snug ${labelClassName}`}>
         {label}

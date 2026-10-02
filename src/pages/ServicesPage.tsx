@@ -107,7 +107,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
               onClick={() => setViewMode('3d')}
               className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold transition-all ${
                 viewMode === '3d'
-                  ? 'bg-[#0E0E0E] text-[#FFF200] shadow-sm'
+                  ? 'bg-[#C8102E] text-white shadow-sm'
                   : 'text-neutral-600 hover:text-black'
               }`}
             >
@@ -119,7 +119,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
               onClick={() => setViewMode('photo')}
               className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold transition-all ${
                 viewMode === 'photo'
-                  ? 'bg-[#0E0E0E] text-[#FFF200] shadow-sm'
+                  ? 'bg-[#C8102E] text-white shadow-sm'
                   : 'text-neutral-600 hover:text-black'
               }`}
             >
@@ -165,12 +165,12 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-[#FFF200] font-mono text-[11px] font-bold border border-white/15">
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-red-400 font-mono text-[11px] font-bold border border-white/15">
                   Service 0{index + 1}
                 </div>
 
                 <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[10px] uppercase tracking-widest text-[#F2C230] font-semibold">
+                  <span className="text-[10px] uppercase tracking-widest text-red-400 font-semibold">
                     {service.tagline}
                   </span>
                   <div className="text-lg sm:text-xl font-bold font-heading">{service.name}</div>
@@ -187,7 +187,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
           0{index + 1} / 05 — {service.tagline}
         </span>
 
-        <h2 className="text-xl sm:text-3xl font-extrabold text-[#0E0E0E] font-heading tracking-tight mb-3">
+        <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] font-heading tracking-tight mb-3">
           {service.name}
         </h2>
 
@@ -201,14 +201,14 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
             const Icon = item.icon;
             return (
               <div key={item.label} className="flex items-start gap-2">
-                <div className="w-6 h-6 rounded-md bg-[#F2C230]/20 flex items-center justify-center text-[#0E0E0E] shrink-0 mt-0.5">
-                  <Icon className="w-3.5 h-3.5 text-[#0E0E0E]" />
+                <div className="w-6 h-6 rounded-md bg-[#C8102E]/10 flex items-center justify-center text-[#C8102E] shrink-0 mt-0.5">
+                  <Icon className="w-3.5 h-3.5 text-[#C8102E]" />
                 </div>
                 <div>
                   <div className="text-[10px] font-mono font-semibold text-neutral-500 uppercase tracking-wider">
                     {item.label}
                   </div>
-                  <div className="text-xs font-bold text-[#0E0E0E] font-heading">
+                  <div className="text-xs font-bold text-[#0F172A] font-heading">
                     {item.value}
                   </div>
                 </div>
@@ -219,12 +219,12 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
 
         {/* Quality Milestones */}
         <div className="w-full space-y-2 mb-6 pb-4 border-b border-black/10">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0E0E0E] font-semibold">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#F2C230] shrink-0" />
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0F172A] font-semibold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#C8102E] shrink-0" />
             <span>Engineered to statutory standards and structural safety margins</span>
           </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0E0E0E] font-semibold">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#F2C230] shrink-0" />
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0F172A] font-semibold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-[#C8102E] shrink-0" />
             <span>Heavy machinery deployment tailored for Deccan regional terrain</span>
           </div>
         </div>
@@ -243,7 +243,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
             href={siteData.phone.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0E0E0E] hover:text-[#0B3A5E]"
+            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0F172A] hover:text-[#C8102E] transition-colors"
           >
             <span>Quick WhatsApp Inquiry</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -263,9 +263,9 @@ export const ServicesPage: React.FC = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-[#0E0E0E] text-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 lg:p-10 border border-white/10 shadow-xl relative overflow-hidden"
+          className="bg-[#0F172A] text-white rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 lg:p-10 border border-slate-800 shadow-xl relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-[#F2C230]/10 rounded-full blur-[90px] pointer-events-none" />
+          <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-red-600/10 rounded-full blur-[90px] pointer-events-none" />
 
           {/* Breadcrumb */}
           <nav
@@ -276,7 +276,7 @@ export const ServicesPage: React.FC = () => {
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#FFF200]">Services</span>
+            <span className="text-red-400">Services</span>
           </nav>
 
           <SectionEyebrow label="CORE COMPETENCIES & 3D SIMULATION" dark className="mb-3 relative z-10" />
@@ -294,7 +294,7 @@ export const ServicesPage: React.FC = () => {
               Request Project Proposal
             </PillButton>
             <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 text-xs font-mono text-neutral-300">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#FFF200]" />
+              <ShieldCheck className="w-3.5 h-3.5 text-red-400" />
               <span>Full Statutory &amp; Engineering Compliance</span>
             </span>
           </div>

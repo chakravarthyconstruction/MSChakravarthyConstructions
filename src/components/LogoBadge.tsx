@@ -25,7 +25,7 @@ export const LogoBadge: React.FC<LogoBadgeProps> = ({
   return (
     <div
       style={{ width: `${pixelSize}px`, height: `${pixelSize}px` }}
-      className={`relative inline-flex items-center justify-center rounded-full overflow-hidden bg-black shrink-0 shadow-md ring-1 ring-black/10 select-none ${className}`}
+      className={`relative inline-flex items-center justify-center rounded-full overflow-hidden bg-white shrink-0 shadow-md ring-1 ring-[#C8102E]/20 select-none ${className}`}
       aria-hidden="true"
     >
       <img

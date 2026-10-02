@@ -197,8 +197,8 @@ export const ThreeTerrainCanvas: React.FC<ThreeTerrainCanvasProps> = ({ classNam
       {/* Top HUD Controls */}
       <div className="relative z-10 p-5 sm:p-6 flex flex-wrap items-center justify-between gap-3 pointer-events-none">
         <div className="flex items-center gap-2.5">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#FFF200] animate-ping" />
-          <span className="text-xs font-mono font-bold tracking-widest text-[#FFF200] uppercase">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#C8102E] animate-ping" />
+          <span className="text-xs font-mono font-bold tracking-widest text-red-400 uppercase">
             3D Civil Terrain Simulator
           </span>
         </div>
@@ -210,7 +210,7 @@ export const ThreeTerrainCanvas: React.FC<ThreeTerrainCanvasProps> = ({ classNam
             onClick={() => setActiveMode('topography')}
             className={`px-3 py-1 rounded-full text-[11px] font-mono font-semibold transition-all ${
               activeMode === 'topography'
-                ? 'bg-[#F2C230] text-[#0E0E0E]'
+                ? 'bg-[#C8102E] text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
@@ -221,7 +221,7 @@ export const ThreeTerrainCanvas: React.FC<ThreeTerrainCanvasProps> = ({ classNam
             onClick={() => setActiveMode('hydraulics')}
             className={`px-3 py-1 rounded-full text-[11px] font-mono font-semibold transition-all ${
               activeMode === 'hydraulics'
-                ? 'bg-[#F2C230] text-[#0E0E0E]'
+                ? 'bg-[#C8102E] text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
@@ -232,7 +232,7 @@ export const ThreeTerrainCanvas: React.FC<ThreeTerrainCanvasProps> = ({ classNam
             onClick={() => setActiveMode('highway')}
             className={`px-3 py-1 rounded-full text-[11px] font-mono font-semibold transition-all ${
               activeMode === 'highway'
-                ? 'bg-[#F2C230] text-[#0E0E0E]'
+                ? 'bg-[#C8102E] text-white'
                 : 'text-neutral-400 hover:text-white'
             }`}
           >
@@ -248,9 +248,9 @@ export const ThreeTerrainCanvas: React.FC<ThreeTerrainCanvasProps> = ({ classNam
             SURVEY STATION / ANANTAPUR SECTOR
           </div>
           <div className="flex items-center gap-4 text-xs font-mono font-bold text-white mt-1">
-            <span>LON: <span className="text-[#FFF200]">{hoveredCoords.x}</span></span>
-            <span>LAT: <span className="text-[#FFF200]">{hoveredCoords.y}</span></span>
-            <span>ELEV: <span className="text-[#FFF200]">{hoveredCoords.elev}</span></span>
+            <span>LON: <span className="text-red-400">{hoveredCoords.x}</span></span>
+            <span>LAT: <span className="text-red-400">{hoveredCoords.y}</span></span>
+            <span>ELEV: <span className="text-red-400">{hoveredCoords.elev}</span></span>
           </div>
         </div>
 

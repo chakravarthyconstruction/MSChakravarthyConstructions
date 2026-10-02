@@ -38,26 +38,26 @@ export const CustomCursor: React.FC = () => {
         isHovering = true;
         gsap.to(ring, {
           scale: 1.8,
-          borderColor: '#F2C230',
-          backgroundColor: 'rgba(242, 194, 48, 0.08)',
+          borderColor: '#C8102E',
+          backgroundColor: 'rgba(200, 16, 46, 0.08)',
           duration: 0.25,
         });
         gsap.to(dot, {
           scale: 0.6,
-          backgroundColor: '#FFF200',
+          backgroundColor: '#C8102E',
           duration: 0.25,
         });
       } else if (!interactive && isHovering) {
         isHovering = false;
         gsap.to(ring, {
           scale: 1,
-          borderColor: 'rgba(14, 14, 14, 0.35)',
+          borderColor: 'rgba(15, 23, 42, 0.35)',
           backgroundColor: 'transparent',
           duration: 0.25,
         });
         gsap.to(dot, {
           scale: 1,
-          backgroundColor: '#0E0E0E',
+          backgroundColor: '#0F172A',
           duration: 0.25,
         });
       }
@@ -77,12 +77,12 @@ export const CustomCursor: React.FC = () => {
       {/* Center Precision Dot */}
       <div
         ref={cursorDotRef}
-        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#0E0E0E] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#0F172A] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block"
       />
       {/* Surveyor Crosshair Outer Ring */}
       <div
         ref={cursorRingRef}
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#0E0E0E]/40 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-colors"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#0F172A]/40 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-colors"
       />
     </>
   );

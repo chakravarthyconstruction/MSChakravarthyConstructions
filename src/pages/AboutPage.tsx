@@ -6,6 +6,7 @@ import { siteData } from '../data/site';
 import { siteImages } from '../data/images';
 import { SectionEyebrow } from '../components/SectionEyebrow';
 import { BlueprintInspector } from '../components/BlueprintInspector';
+import { SitePhotoScroll } from '../components/SitePhotoScroll';
 import { Leadership } from '../sections/Leadership';
 import { Approach } from '../sections/Approach';
 import { CTABanner } from '../sections/CTABanner';
@@ -15,35 +16,35 @@ export const AboutPage: React.FC = () => {
     <div className="pt-20 sm:pt-24 overflow-hidden">
       {/* Page Header / Bento Banner */}
       <section className="px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto pb-6 sm:pb-8">
-        <motion.div
+          <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="bg-[#F2C230] rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 lg:p-10 border border-[#e5b527] shadow-[0_10px_28px_rgba(242,194,48,0.16)]"
+          className="bg-gradient-to-br from-[#C8102E] via-[#B91C1C] to-[#881337] rounded-[28px] sm:rounded-[36px] p-6 sm:p-8 lg:p-10 border border-red-600/30 shadow-[0_16px_40px_rgba(200,16,46,0.22)] text-white"
         >
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-[#0E0E0E]/70 mb-4">
-            <Link to="/" className="hover:text-[#0E0E0E] transition-colors">Home</Link>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-white/80 mb-4">
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#0E0E0E]">About Us</span>
+            <span className="text-white">About Us</span>
           </nav>
 
           <SectionEyebrow label="HERITAGE & LEADERSHIP" className="mb-3" />
 
-          <h1 className="text-2xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-[#0E0E0E] font-heading tracking-tight leading-[1.14] max-w-3xl">
+          <h1 className="text-2xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-white font-heading tracking-tight leading-[1.14] max-w-3xl">
             Three Generations of Civil Construction Heritage
           </h1>
 
-          <p className="mt-4 text-sm sm:text-base text-[#0E0E0E]/85 font-medium max-w-2xl leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-white/90 font-medium max-w-2xl leading-relaxed">
             {siteData.about.statement} {siteData.about.summary}
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2.5">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#0E0E0E] text-[#FFF200] text-xs font-mono font-bold tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-[#C8102E] text-xs font-mono font-bold tracking-wider shadow-sm">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Three Generations of Discipline</span>
+              <span>Special Class Contractor</span>
             </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/10 text-[#0E0E0E] text-xs font-mono font-bold tracking-wider">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-xs font-mono font-bold tracking-wider">
               <span>Headquartered in Anantapur, AP</span>
             </span>
           </div>
@@ -62,15 +63,15 @@ export const AboutPage: React.FC = () => {
             className="lg:col-span-6 space-y-4"
           >
             <SectionEyebrow label="OUR IDENTITY" />
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0E0E0E] font-heading tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] font-heading tracking-tight leading-tight">
               {siteData.about.headline}
             </h2>
             <div className="space-y-3 text-neutral-700 text-xs sm:text-sm leading-relaxed">
-              <p className="font-medium text-[#0E0E0E]/90">
+              <p className="font-medium text-[#0F172A]/90">
                 Operating with deep roots in Anantapur, Andhra Pradesh, M/S Chakravarthy Constructions has grown through three successive generations of civil engineering leaders.
               </p>
               <p>
-                Under the strategic direction of Managing Director Mr. D. Chakravarthy and Chairman Mr. D. Nagaraju, our project execution spans major highway corridors, irrigation canal networks, earthen water reservoirs, and stone check dams across Andhra Pradesh, Karnataka, and Telangana.
+                Under the strategic direction of Managing Director Mr. D. Chakravarthy and Chairman Mr. D. Nagaraju, our project execution spans major highway corridors, bulk earth works, irrigation canal networks, earthen water reservoirs, and stone check dams across Andhra Pradesh, Karnataka, and Telangana.
               </p>
               <p>
                 Our philosophy balances time-tested structural safety protocols with modern heavy machinery mobilization, ensuring that public works and civil investments serve regional communities for decades to come.
@@ -80,21 +81,21 @@ export const AboutPage: React.FC = () => {
             {/* Credibility Pillars */}
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
-                <Users className="w-4 h-4 text-[#F2C230] mb-1.5" />
-                <h4 className="text-xs font-bold text-[#0E0E0E] font-heading">3 Generations</h4>
+                <Users className="w-4 h-4 text-[#C8102E] mb-1.5" />
+                <h4 className="text-xs font-bold text-[#0F172A] font-heading">3 Generations</h4>
                 <p className="text-[11px] text-neutral-500 mt-0.5">Multi-generational continuity</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
-                <HardHat className="w-4 h-4 text-[#F2C230] mb-1.5" />
-                <h4 className="text-xs font-bold text-[#0E0E0E] font-heading">3 Key States</h4>
+                <HardHat className="w-4 h-4 text-[#C8102E] mb-1.5" />
+                <h4 className="text-xs font-bold text-[#0F172A] font-heading">3 Key States</h4>
                 <p className="text-[11px] text-neutral-500 mt-0.5">AP, Karnataka &amp; Telangana</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
-                <Award className="w-4 h-4 text-[#F2C230] mb-1.5" />
-                <h4 className="text-xs font-bold text-[#0E0E0E] font-heading">5 Core Disciplines</h4>
-                <p className="text-[11px] text-neutral-500 mt-0.5">Roads &amp; water structures</p>
+                <Award className="w-4 h-4 text-[#C8102E] mb-1.5" />
+                <h4 className="text-xs font-bold text-[#0F172A] font-heading">Special Class</h4>
+                <p className="text-[11px] text-neutral-500 mt-0.5">Highways &amp; Earth Works</p>
               </div>
             </div>
           </motion.div>
@@ -134,6 +135,9 @@ export const AboutPage: React.FC = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Real Site Photos Marquee */}
+      <SitePhotoScroll />
 
       {/* Leadership Section */}
       <Leadership />

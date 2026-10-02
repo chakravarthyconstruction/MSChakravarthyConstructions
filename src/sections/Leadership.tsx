@@ -21,7 +21,7 @@ export const Leadership: React.FC = () => {
       >
         <div>
           <SectionEyebrow label="OUR LEADERSHIP" className="mb-3" />
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] tracking-tight font-heading max-w-xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] tracking-tight font-heading max-w-xl leading-tight">
             Steered By Three Generations of Discipline
           </h2>
         </div>
@@ -30,69 +30,104 @@ export const Leadership: React.FC = () => {
         </p>
       </motion.div>
 
-      {/* Two Yellow Leadership Cards with 3D Parallax Tilt */}
+      {/* Two Premium Leadership Cards with 3D Parallax Tilt */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
-        {siteData.leadership.map((leader, index) => (
-          <motion.div
-            key={leader.name}
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
-            className="h-full"
-          >
-            <ParallaxTiltCard className="h-full rounded-[28px] sm:rounded-[32px]" maxTilt={6}>
-              <div className="bg-[#F2C230] rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 border border-[#e5b527] shadow-[0_8px_28px_rgba(242,194,48,0.16)] flex flex-col justify-between h-full relative group hover:shadow-xl transition-all duration-300">
-                {/* Top row: Monogram or Real Photo if available */}
-                <div className="flex items-start justify-between gap-4 mb-6">
-                  {leader.photo ? (
-                    <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-3 border-black/20 shadow-md">
-                      <img
-                        src={leader.photo}
-                        alt={leader.name}
-                        width={80}
-                        height={80}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                    </div>
-                  ) : (
+        {siteData.leadership.map((leader, index) => {
+          const isDark = index === 0;
+          return (
+            <motion.div
+              key={leader.name}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              className="h-full"
+            >
+              <ParallaxTiltCard className="h-full rounded-[28px] sm:rounded-[32px]" maxTilt={6}>
+                <div
+                  className={`rounded-[28px] sm:rounded-[32px] p-6 sm:p-8 flex flex-col justify-between h-full relative group hover:shadow-2xl transition-all duration-300 ${
+                    isDark
+                      ? 'bg-[#0F172A] text-white border border-slate-800 shadow-xl'
+                      : 'bg-white text-[#0F172A] border border-black/10 shadow-lg'
+                  }`}
+                >
+                  {/* Top row: Monogram or Real Photo if available */}
+                  <div className="flex items-start justify-between gap-4 mb-6">
+                    {leader.photo ? (
+                      <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-3 border-black/20 shadow-md">
+                        <img
+                          src={leader.photo}
+                          alt={leader.name}
+                          width={80}
+                          height={80}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        className={`w-16 h-16 sm:w-20 sm:h-20 rounded-full flex items-center justify-center font-heading font-black text-xl sm:text-2xl tracking-tight shadow-lg group-hover:scale-105 transition-transform ${
+                          isDark
+                            ? 'bg-[#C8102E] text-white border border-red-500/30'
+                            : 'bg-[#0F172A] text-white border border-black/10'
+                        }`}
+                        aria-label={`${leader.name} Monogram ${leader.initials}`}
+                      >
+                        <span>{leader.initials}</span>
+                      </div>
+                    )}
+
                     <div
-                      className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#0E0E0E] text-[#FFF200] flex items-center justify-center font-heading font-black text-xl sm:text-2xl tracking-tight shadow-lg border border-black/10 group-hover:scale-105 transition-transform"
-                      aria-label={`${leader.name} Monogram ${leader.initials}`}
+                      className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider ${
+                        isDark ? 'bg-white/10 text-white' : 'bg-[#0F172A]/5 text-[#0F172A]'
+                      }`}
                     >
-                      <span>{leader.initials}</span>
+                      {index === 0 ? <Briefcase className="w-3 h-3 text-[#C8102E]" /> : <Award className="w-3 h-3 text-[#C8102E]" />}
+                      <span>Executive Council</span>
                     </div>
-                  )}
+                  </div>
 
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/10 text-[#0E0E0E] text-[11px] font-bold uppercase tracking-wider">
-                    {index === 0 ? <Briefcase className="w-3 h-3" /> : <Award className="w-3 h-3" />}
-                    <span>Executive Council</span>
+                  {/* Middle: Name and Role */}
+                  <div>
+                    <div
+                      className={`text-xs font-bold uppercase tracking-widest mb-1 font-mono ${
+                        isDark ? 'text-red-400' : 'text-[#C8102E]'
+                      }`}
+                    >
+                      {leader.role}
+                    </div>
+                    <h3
+                      className={`text-xl sm:text-2xl lg:text-3xl font-extrabold font-heading tracking-tight mb-3 ${
+                        isDark ? 'text-white' : 'text-[#0F172A]'
+                      }`}
+                    >
+                      {leader.name}
+                    </h3>
+                    <p
+                      className={`text-xs sm:text-sm font-medium leading-relaxed ${
+                        isDark ? 'text-slate-300' : 'text-slate-600'
+                      }`}
+                    >
+                      {leader.bio}
+                    </p>
+                  </div>
+
+                  {/* Bottom: Signature Line */}
+                  <div
+                    className={`mt-6 pt-4 border-t flex items-center justify-between text-[11px] font-bold uppercase tracking-widest font-mono ${
+                      isDark
+                        ? 'border-slate-800 text-slate-400'
+                        : 'border-black/10 text-slate-500'
+                    }`}
+                  >
+                    <span>M/S Chakravarthy</span>
+                    <span>Anantapur, AP</span>
                   </div>
                 </div>
-
-                {/* Middle: Name and Role */}
-                <div>
-                  <div className="text-xs font-bold uppercase tracking-widest text-[#0E0E0E]/75 mb-1 font-mono">
-                    {leader.role}
-                  </div>
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0E0E0E] font-heading tracking-tight mb-3">
-                    {leader.name}
-                  </h3>
-                  <p className="text-[#0E0E0E]/85 text-xs sm:text-sm font-medium leading-relaxed">
-                    {leader.bio}
-                  </p>
-                </div>
-
-                {/* Bottom: Signature Line */}
-                <div className="mt-6 pt-4 border-t border-black/15 flex items-center justify-between text-[11px] font-bold uppercase tracking-widest text-[#0E0E0E]/70 font-mono">
-                  <span>M/S Chakravarthy</span>
-                  <span>Anantapur, AP</span>
-                </div>
-              </div>
-            </ParallaxTiltCard>
-          </motion.div>
-        ))}
+              </ParallaxTiltCard>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

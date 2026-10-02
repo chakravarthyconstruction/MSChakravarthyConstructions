@@ -23,7 +23,7 @@ export const InteractiveSimulation: React.FC = () => {
       >
         <div>
           <SectionEyebrow label="ENGINEERING INTELLIGENCE" className="mb-3" />
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] tracking-tight font-heading max-w-xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] tracking-tight font-heading max-w-xl leading-tight">
             Interactive Civil Telemetry &amp; CAD Blueprint Scanner
           </h2>
         </div>
@@ -47,26 +47,26 @@ export const InteractiveSimulation: React.FC = () => {
           {/* Telemetry Status Bar below 3D canvas */}
           <div className="mt-3.5 grid grid-cols-3 gap-2.5">
             <div className="p-3 rounded-2xl bg-white border border-black/5 shadow-sm flex items-center gap-2.5">
-              <Compass className="w-4 h-4 text-[#F2C230] shrink-0" />
+              <Compass className="w-4 h-4 text-[#C8102E] shrink-0" />
               <div>
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Station</div>
-                <div className="text-xs font-bold font-heading text-[#0E0E0E]">Anantapur AP</div>
+                <div className="text-xs font-bold font-heading text-[#0F172A]">Anantapur AP</div>
               </div>
             </div>
 
             <div className="p-3 rounded-2xl bg-white border border-black/5 shadow-sm flex items-center gap-2.5">
-              <Activity className="w-4 h-4 text-[#F2C230] shrink-0" />
+              <Activity className="w-4 h-4 text-[#C8102E] shrink-0" />
               <div>
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Elevation</div>
-                <div className="text-xs font-bold font-heading text-[#0E0E0E]">412.5m Deccan</div>
+                <div className="text-xs font-bold font-heading text-[#0F172A]">412.5m Deccan</div>
               </div>
             </div>
 
             <div className="p-3 rounded-2xl bg-white border border-black/5 shadow-sm flex items-center gap-2.5">
-              <Cpu className="w-4 h-4 text-[#F2C230] shrink-0" />
+              <Cpu className="w-4 h-4 text-[#C8102E] shrink-0" />
               <div>
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Precision</div>
-                <div className="text-xs font-bold font-heading text-[#0E0E0E]">±2.5mm Strata</div>
+                <div className="text-xs font-bold font-heading text-[#0F172A]">±2.5mm Strata</div>
               </div>
             </div>
           </div>
@@ -90,14 +90,14 @@ export const InteractiveSimulation: React.FC = () => {
             />
 
             {/* Explanatory annotation pill */}
-            <div className="mt-3.5 p-3 rounded-2xl bg-[#F2C230] border border-[#e5b527] shadow-sm flex items-center justify-between text-[#0E0E0E]">
+            <div className="mt-3.5 p-3 rounded-2xl bg-[#C8102E] border border-red-700 shadow-sm flex items-center justify-between text-white">
               <div className="flex items-center gap-2">
-                <Layers className="w-4 h-4 shrink-0" />
+                <Layers className="w-4 h-4 shrink-0 text-white" />
                 <span className="text-xs font-bold font-heading">
                   Interactive Laser Cross-Section Analysis
                 </span>
               </div>
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-black/10 px-2 py-0.5 rounded-full">
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full text-white">
                 Live X-Ray
               </span>
             </div>

@@ -34,7 +34,7 @@ export const PillButton: React.FC<PillButtonProps> = ({
   disabled = false,
 }) => {
   const baseClasses =
-    'group relative inline-flex items-center justify-center gap-3 font-semibold rounded-full transition-all duration-300 select-none text-sm md:text-base tracking-tight cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E] focus-visible:ring-offset-2';
+    'group relative inline-flex items-center justify-center gap-3 font-semibold rounded-full transition-all duration-300 select-none text-sm md:text-base tracking-tight cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] focus-visible:ring-offset-2';
 
   let variantClasses = '';
   let defaultIconContainerClasses = '';
@@ -42,33 +42,33 @@ export const PillButton: React.FC<PillButtonProps> = ({
   switch (variant) {
     case 'primary':
       variantClasses =
-        'bg-[#0E0E0E] text-white hover:bg-black hover:shadow-xl active:scale-[0.98] py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 border border-black/10';
+        'bg-[#0F172A] text-white hover:bg-slate-900 hover:shadow-xl active:scale-[0.98] py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 border border-slate-700/50 shadow-md';
       defaultIconContainerClasses =
-        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#F2C230] text-[#0E0E0E] flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:rotate-12';
+        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#C8102E] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:rotate-12 shadow-sm';
       break;
     case 'secondary':
       variantClasses =
-        'bg-[#F2C230] text-[#0E0E0E] hover:bg-[#e4b525] hover:shadow-lg active:scale-[0.98] py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 font-bold';
+        'bg-[#C8102E] text-white hover:bg-[#B91C1C] hover:shadow-lg active:scale-[0.98] py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 font-bold shadow-md';
       defaultIconContainerClasses =
-        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#0E0E0E] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:rotate-12';
+        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-white text-[#C8102E] flex items-center justify-center transition-transform duration-300 group-hover:scale-105 group-hover:rotate-12 shadow-sm';
       break;
     case 'outline':
       variantClasses =
-        'bg-transparent text-[#0E0E0E] border-2 border-[#0E0E0E]/80 hover:bg-[#0E0E0E] hover:text-white py-2 pl-5 pr-2 md:py-2.5 md:pl-6 md:pr-2.5 font-semibold';
+        'bg-transparent text-[#0F172A] border-2 border-slate-300 hover:border-[#C8102E] hover:text-[#C8102E] py-2 pl-5 pr-2 md:py-2.5 md:pl-6 md:pr-2.5 font-semibold';
       defaultIconContainerClasses =
-        'w-8 h-8 md:w-8 md:h-8 rounded-full bg-[#0E0E0E]/10 group-hover:bg-[#F2C230] group-hover:text-[#0E0E0E] text-[#0E0E0E] flex items-center justify-center transition-all duration-300';
+        'w-8 h-8 md:w-8 md:h-8 rounded-full bg-slate-100 group-hover:bg-[#C8102E] group-hover:text-white text-[#0F172A] flex items-center justify-center transition-all duration-300';
       break;
     case 'dark-outline':
       variantClasses =
-        'bg-transparent text-white border-2 border-white/20 hover:border-[#F2C230] hover:text-[#F2C230] py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 font-semibold';
+        'bg-transparent text-white border-2 border-white/20 hover:border-[#C8102E] hover:text-[#C8102E] py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 font-semibold';
       defaultIconContainerClasses =
-        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/10 group-hover:bg-[#F2C230] group-hover:text-[#0E0E0E] text-white flex items-center justify-center transition-all duration-300';
+        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-white/10 group-hover:bg-[#C8102E] group-hover:text-white text-white flex items-center justify-center transition-all duration-300';
       break;
     case 'white':
       variantClasses =
-        'bg-white text-[#0E0E0E] hover:bg-neutral-100 hover:shadow-lg py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 border border-black/5 font-semibold';
+        'bg-white text-[#0F172A] hover:bg-slate-50 hover:shadow-lg py-2.5 pl-6 pr-2.5 md:py-3 md:pl-7 md:pr-3 border border-slate-200 font-semibold';
       defaultIconContainerClasses =
-        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#0E0E0E] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105';
+        'w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#C8102E] text-white flex items-center justify-center transition-transform duration-300 group-hover:scale-105';
       break;
   }
 

@@ -22,7 +22,7 @@ export const Reach: React.FC = () => {
       >
         <div>
           <SectionEyebrow label="WHERE WE BUILD" className="mb-3" />
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] tracking-tight font-heading max-w-xl leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] tracking-tight font-heading max-w-xl leading-tight">
             Strategic Footprint Across Key Growth Corridors
           </h2>
         </div>
@@ -48,7 +48,7 @@ export const Reach: React.FC = () => {
                 <span
                   className="absolute top-1 right-3 text-5xl sm:text-6xl font-black font-heading select-none pointer-events-none transition-transform duration-500 group-hover:scale-105"
                   style={{
-                    WebkitTextStroke: '1.5px rgba(14, 14, 14, 0.08)',
+                    WebkitTextStroke: '1.5px rgba(15, 23, 42, 0.08)',
                     color: 'transparent',
                   }}
                   aria-hidden="true"
@@ -58,7 +58,7 @@ export const Reach: React.FC = () => {
 
                 {/* Top Icon & Tag */}
                 <div className="relative z-10">
-                  <div className="w-8 h-8 rounded-full bg-[#0E0E0E]/5 text-[#0E0E0E] flex items-center justify-center mb-4 group-hover:bg-[#F2C230] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#0F172A]/5 text-[#0F172A] flex items-center justify-center mb-4 group-hover:bg-[#C8102E] group-hover:text-white transition-colors">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <span className="text-[11px] font-mono font-bold text-neutral-400 uppercase tracking-widest">
@@ -68,7 +68,7 @@ export const Reach: React.FC = () => {
 
                 {/* Bottom State Title & Description */}
                 <div className="relative z-10 mt-auto pt-4">
-                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0E0E0E] font-heading tracking-tight mb-1">
+                  <h3 className="text-xl sm:text-2xl font-extrabold text-[#0F172A] font-heading tracking-tight mb-1">
                     {state.name}
                   </h3>
                   <p className="text-neutral-600 text-xs font-medium leading-relaxed line-clamp-2">
@@ -89,26 +89,26 @@ export const Reach: React.FC = () => {
           className="h-full"
         >
           <ParallaxTiltCard className="h-full rounded-[24px] sm:rounded-[28px]" maxTilt={6}>
-            <div className="bg-[#F2C230] p-5 sm:p-6 rounded-[24px] sm:rounded-[28px] border border-[#e5b527] shadow-md relative overflow-hidden flex flex-col justify-between h-full min-h-[190px] sm:min-h-[220px] group hover:shadow-xl transition-all duration-300">
+            <div className="bg-[#0F172A] p-5 sm:p-6 rounded-[24px] sm:rounded-[28px] border border-slate-700 shadow-md relative overflow-hidden flex flex-col justify-between h-full min-h-[190px] sm:min-h-[220px] text-white group hover:shadow-xl transition-all duration-300">
               <div className="relative z-10 flex items-start justify-between">
-                <div className="w-8 h-8 rounded-full bg-black text-[#FFF200] flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-[#C8102E] text-white flex items-center justify-center">
                   <Globe2 className="w-4 h-4" />
                 </div>
-                <span className="text-[10px] font-mono font-bold text-[#0E0E0E]/80 uppercase tracking-widest bg-black/10 px-2.5 py-0.5 rounded-full">
+                <span className="text-[10px] font-mono font-bold text-white/80 uppercase tracking-widest bg-white/10 px-2.5 py-0.5 rounded-full">
                   Nationwide
                 </span>
               </div>
 
               <div className="relative z-10 mt-auto pt-4">
-                <h3 className="text-xl sm:text-2xl font-extrabold text-[#0E0E0E] font-heading tracking-tight mb-1">
+                <h3 className="text-xl sm:text-2xl font-extrabold text-white font-heading tracking-tight mb-1">
                   Expanding Across India
                 </h3>
-                <p className="text-[#0E0E0E]/85 text-xs font-semibold leading-relaxed line-clamp-2">
+                <p className="text-slate-300 text-xs font-medium leading-relaxed line-clamp-2">
                   Mobilizing multi-generational civil expertise and heavy equipment fleet nationwide.
                 </p>
                 <Link
                   to="/reach"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#0E0E0E] hover:underline mt-3 pt-2.5 border-t border-black/15 w-full justify-between"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white hover:text-red-400 mt-3 pt-2.5 border-t border-white/15 w-full justify-between transition-colors"
                 >
                   <span>View Regional Operations</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

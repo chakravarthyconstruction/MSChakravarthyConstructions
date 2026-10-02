@@ -25,13 +25,13 @@ export const About: React.FC = () => {
           <SectionEyebrow label="ABOUT US" className="mb-4" />
 
           {/* Statement Paragraph */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] leading-[1.18] tracking-tight font-heading">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0F172A] leading-[1.18] tracking-tight font-heading">
             {siteData.about.headline}
           </h2>
 
           {/* Supporting paragraphs */}
           <div className="mt-4 sm:mt-5 space-y-3 text-neutral-700 text-sm sm:text-base leading-relaxed">
-            <p className="font-medium text-[#0E0E0E]/90">
+            <p className="font-medium text-[#0F172A]/90">
               {siteData.about.statement}
             </p>
             <p className="text-neutral-600">
@@ -41,12 +41,12 @@ export const About: React.FC = () => {
 
           {/* Key capability bullets */}
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0E0E0E] bg-white/70 p-2.5 rounded-xl border border-black/5">
-              <CheckCircle2 className="w-4 h-4 text-[#F2C230] shrink-0" />
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white/70 p-2.5 rounded-xl border border-black/5">
+              <CheckCircle2 className="w-4 h-4 text-[#C8102E] shrink-0" />
               <span>Three Generations of Legacy</span>
             </div>
-            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0E0E0E] bg-white/70 p-2.5 rounded-xl border border-black/5">
-              <Compass className="w-4 h-4 text-[#F2C230] shrink-0" />
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white/70 p-2.5 rounded-xl border border-black/5">
+              <Compass className="w-4 h-4 text-[#C8102E] shrink-0" />
               <span>Andhra, Karnataka &amp; Telangana</span>
             </div>
           </div>
@@ -81,11 +81,11 @@ export const About: React.FC = () => {
 
             {/* Corner floating tag */}
             <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none">
-              <div className="px-3 py-1.5 rounded-full bg-[#0E0E0E]/85 backdrop-blur-md text-white text-[11px] sm:text-xs font-semibold flex items-center gap-2 border border-white/15">
-                <span className="w-2 h-2 rounded-full bg-[#FFF200] animate-pulse" />
+              <div className="px-3 py-1.5 rounded-full bg-[#0F172A]/85 backdrop-blur-md text-white text-[11px] sm:text-xs font-semibold flex items-center gap-2 border border-white/15">
+                <span className="w-2 h-2 rounded-full bg-[#C8102E] animate-pulse" />
                 <span>Heavy Civil Infrastructure</span>
               </div>
-              <div className="w-8 h-8 rounded-full bg-[#F2C230] text-[#0E0E0E] flex items-center justify-center shadow-md">
+              <div className="w-8 h-8 rounded-full bg-[#C8102E] text-white flex items-center justify-center shadow-md">
                 <ArrowRight className="w-3.5 h-3.5 -rotate-45" />
               </div>
             </div>

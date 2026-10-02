@@ -43,7 +43,7 @@ export const Services: React.FC = () => {
             </p>
             <Link
               to="/services"
-              className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#F2C230] hover:text-[#FFF200] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-red-400 hover:text-red-300 transition-colors"
             >
               <span>Explore All 5 Services in Detail</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
@@ -72,7 +72,7 @@ export const Services: React.FC = () => {
                   <div className="flex items-start gap-4">
                     <span
                       className={`text-xs sm:text-sm font-mono font-bold transition-colors ${
-                        isActive ? 'text-[#FFF200]' : 'text-neutral-500 group-hover:text-neutral-300'
+                        isActive ? 'text-red-400' : 'text-neutral-500 group-hover:text-neutral-300'
                       }`}
                     >
                       {service.number}
@@ -81,7 +81,7 @@ export const Services: React.FC = () => {
                     <div>
                       <h3
                         className={`text-xl xl:text-2xl font-bold font-heading transition-colors ${
-                          isActive ? 'text-[#F2C230]' : 'text-white group-hover:text-neutral-200'
+                          isActive ? 'text-red-400' : 'text-white group-hover:text-neutral-200'
                         }`}
                       >
                         {service.name}
@@ -95,7 +95,7 @@ export const Services: React.FC = () => {
                   <div
                     className={`w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-all duration-200 ${
                       isActive
-                        ? 'bg-[#F2C230] text-[#0E0E0E] scale-105 shadow-md shadow-[#F2C230]/20'
+                        ? 'bg-[#C8102E] text-white scale-105 shadow-md shadow-red-900/40'
                         : 'bg-white/10 text-white group-hover:bg-white/20'
                     }`}
                   >
@@ -124,7 +124,7 @@ export const Services: React.FC = () => {
                   onClick={() => setViewMode('3d')}
                   className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold transition-all ${
                     viewMode === '3d'
-                      ? 'bg-[#F2C230] text-[#0E0E0E]'
+                      ? 'bg-[#C8102E] text-white'
                       : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -136,7 +136,7 @@ export const Services: React.FC = () => {
                   onClick={() => setViewMode('photo')}
                   className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold transition-all ${
                     viewMode === 'photo'
-                      ? 'bg-[#F2C230] text-[#0E0E0E]'
+                      ? 'bg-[#C8102E] text-white'
                       : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -184,7 +184,7 @@ export const Services: React.FC = () => {
 
                     {/* Floating Tag on Image */}
                     <div className="absolute bottom-5 left-5 right-5">
-                      <span className="text-[11px] uppercase tracking-widest font-bold text-[#FFF200]">
+                      <span className="text-[11px] uppercase tracking-widest font-bold text-red-400">
                         {activeService.tagline}
                       </span>
                       <div className="text-xl font-bold font-heading text-white mt-0.5">
@@ -220,10 +220,10 @@ export const Services: React.FC = () => {
               <div className="p-4 flex flex-col justify-between gap-3">
                 <div>
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-[10px] uppercase tracking-wider text-[#F2C230] font-semibold">
+                    <span className="text-[10px] uppercase tracking-wider text-red-400 font-semibold">
                       {service.tagline}
                     </span>
-                    <span className="text-[11px] font-mono font-bold text-[#FFF200]">
+                    <span className="text-[11px] font-mono font-bold text-red-400">
                       {service.number}
                     </span>
                   </div>
@@ -235,7 +235,7 @@ export const Services: React.FC = () => {
 
                 <Link
                   to="/services"
-                  className="inline-flex items-center justify-between text-xs font-bold uppercase tracking-wider text-[#F2C230] hover:text-[#FFF200] pt-2 border-t border-white/10"
+                  className="inline-flex items-center justify-between text-xs font-bold uppercase tracking-wider text-red-400 hover:text-red-300 pt-2 border-t border-white/10"
                 >
                   <span>Detailed Specifications &amp; CAD Specs</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />

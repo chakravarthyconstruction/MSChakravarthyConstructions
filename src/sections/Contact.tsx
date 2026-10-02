@@ -296,17 +296,17 @@ export const Contact: React.FC = () => {
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
               <button
                 type="submit"
-                className="flex-1 py-3 px-5 rounded-full bg-[#0E0E0E] hover:bg-black text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-sm hover:shadow transition-all duration-200 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0B3A5E]"
+                className="flex-1 py-3 px-5 rounded-full bg-[#0F172A] hover:bg-black text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2.5 shadow-sm hover:shadow transition-all duration-200 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E]"
               >
                 <span>Send via WhatsApp</span>
-                <span className="w-7 h-7 rounded-full bg-[#F2C230] text-[#0E0E0E] flex items-center justify-center transition-transform group-hover:scale-105">
+                <span className="w-7 h-7 rounded-full bg-[#C8102E] text-white flex items-center justify-center transition-transform group-hover:scale-105">
                   <MessageSquare className="w-3.5 h-3.5" />
                 </span>
               </button>
 
               <a
                 href={buildMailtoUrl()}
-                className="py-3 px-4 rounded-full bg-neutral-100 hover:bg-neutral-200 text-[#0E0E0E] font-semibold text-xs flex items-center justify-center gap-2 border border-black/5 transition-colors cursor-pointer text-center"
+                className="py-3 px-4 rounded-full bg-neutral-100 hover:bg-neutral-200 text-[#0F172A] font-semibold text-xs flex items-center justify-center gap-2 border border-black/5 transition-colors cursor-pointer text-center"
               >
                 <Mail className="w-3.5 h-3.5 text-neutral-600" />
                 <span>Send via Email Fallback</span>
@@ -327,7 +327,7 @@ export const Contact: React.FC = () => {
           <div className="bg-white p-5 rounded-[24px] border border-black/5 shadow-sm space-y-3">
             <div className="flex items-start justify-between gap-3 p-3 rounded-xl bg-neutral-50 border border-black/5">
               <div className="flex items-center gap-2.5">
-                <div className="w-8 h-8 rounded-full bg-[#F2C230] text-[#0E0E0E] flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#C8102E] text-white flex items-center justify-center shrink-0">
                   <Phone className="w-3.5 h-3.5" />
                 </div>
                 <div>
@@ -336,7 +336,7 @@ export const Contact: React.FC = () => {
                   </div>
                   <a
                     href={siteData.phone.tel}
-                    className="text-sm sm:text-base font-bold text-[#0E0E0E] hover:text-[#0B3A5E]"
+                    className="text-sm sm:text-base font-bold text-[#0F172A] hover:text-[#C8102E]"
                   >
                     {siteData.phone.display}
                   </a>
@@ -345,7 +345,7 @@ export const Contact: React.FC = () => {
               <button
                 type="button"
                 onClick={handleCopyPhone}
-                className="p-1.5 rounded-lg text-neutral-400 hover:text-[#0E0E0E] hover:bg-white transition-colors"
+                className="p-1.5 rounded-lg text-neutral-400 hover:text-[#0F172A] hover:bg-white transition-colors"
                 aria-label="Copy phone number"
                 title="Copy phone number"
               >
@@ -354,8 +354,8 @@ export const Contact: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-2.5 p-3 rounded-xl bg-neutral-50 border border-black/5">
-              <div className="w-8 h-8 rounded-full bg-[#0E0E0E] text-[#FFF200] flex items-center justify-center shrink-0">
-                <Mail className="w-3.5 h-3.5" />
+              <div className="w-8 h-8 rounded-full bg-[#0F172A] text-white flex items-center justify-center shrink-0">
+                <Mail className="w-3.5 h-3.5 text-red-400" />
               </div>
               <div className="overflow-hidden">
                 <div className="text-[10px] font-mono font-bold text-neutral-500 uppercase tracking-wider">
@@ -363,7 +363,7 @@ export const Contact: React.FC = () => {
                 </div>
                 <a
                   href={`mailto:${siteData.email}`}
-                  className="text-xs sm:text-sm font-bold text-[#0E0E0E] hover:text-[#0B3A5E] truncate block"
+                  className="text-xs sm:text-sm font-bold text-[#0F172A] hover:text-[#C8102E] truncate block"
                 >
                   {siteData.email}
                 </a>

@@ -45,7 +45,7 @@ export const App: React.FC = () => {
       {/* Precision Surveyor Custom Cursor */}
       <CustomCursor />
 
-      <div className="min-h-screen bg-[#F8F5E8] text-[#0E0E0E] flex flex-col antialiased selection:bg-[#F2C230] selection:text-[#0E0E0E] overflow-x-hidden">
+      <div className="min-h-screen bg-[#F8FAFC] text-[#0F172A] flex flex-col antialiased selection:bg-[#C8102E] selection:text-white overflow-x-hidden">
         {/* Persistent Floating Navbar */}
         <Navbar />
 
