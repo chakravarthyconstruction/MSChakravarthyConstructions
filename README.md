@@ -1,8 +1,30 @@
-# M/S Chakravarthy Constructions — Marketing Website
+# M/s Chakravarthy Constructions — Corporate Web Platform
 
-A high-performance, responsive frontend marketing website for **M/S Chakravarthy Constructions**, an established infrastructure and civil engineering firm based in Anantapur, Andhra Pradesh.
+Production website and content repository for **M/s Chakravarthy Constructions**, a Class-1 civil contractor and tier-1 infrastructure subcontracting partner operating across Andhra Pradesh, Telangana, and Karnataka.
 
-Designed to mirror the layout language, bold editorial typography, and bento styling of modern architectural benchmarks (Arkonex reference) while adhering strictly to verified client business data.
+---
+
+## 1. Verified Corporate Profile
+
+- **Legal Entity:** M/s Chakravarthy Constructions
+- **Constitution:** Registered Partnership Firm — Firm No. 1520 of 2009, registered under Section 58(1) of the Indian Partnership Act, 1932 by the Registrar of Firms, Ranga Reddy District
+- **Registration Date:** 22nd August 2009
+- **PAN:** AAGFC3799N
+- **GST:**
+  - Andhra Pradesh: `37AAGFC3799N1Z0` (Principal Place: Dwaraka Nagar, Anantapur)
+  - Telangana: `36AAGFC3799N1ZQ` (Principal Place: Balaji Nagar, Kukatpally, Hyderabad)
+- **MSME:** UDYAM-AP-01-0004590 — Small Enterprise; NIC 42204 (Construction & maintenance of water reservoirs, mains, and irrigation systems)
+- **Contractor Registrations:**
+  - Govt. of Andhra Pradesh (Water Resources Department): Class-1 Contractor (Civil), Reg. No. COT/AP/FC/807/2020 — qualified for single works up to ₹10 Crores
+  - Govt. of Karnataka (Public Works Department): Class-1 Civil Contractor, Licence No. CBS/C1/CIVIL/11740/2019
+- **Audited Financial Baseline** (M/s Lokireddy & Co., Chartered Accountants):
+  - Net Worth: ₹3,10,79,450/- as of 29-04-2025 (UDIN: 25230189BMJOWK6170)
+  - 10-Year Contract Receipts: ₹26.50+ Crores cumulative, ₹6.55 Crores in FY 2024-25 (UDIN: 25209099BMNYXU9552)
+- **Leadership:** Sri D. Nagaraju — Chairman & Founder (Managing Partner); Sri D. Chakravarthy — Managing Director (Managing Partner)
+- **Offices:**
+  - Head Office (Telangana): Flat No. 201, SVR Harsha Homes, D.No. 35/122, Balaji Nagar, Kukatpally, Hyderabad – 500072
+  - Branch Office (Andhra Pradesh): D.No. 1-410, 1st Road Extension, Dwaraka Nagar, Anantapur – 515001
+- **Contact:** Primary Corporate Line +91 81257 25425 · Project Operations Desk +91 63051 67125 · srichakravarthyconstructions@gmail.com
 
 ---
 
@@ -32,65 +54,59 @@ Designed to mirror the layout language, bold editorial typography, and bento sty
 
 ---
 
-## 📁 Project Structure
+## 📁 Information Architecture
+
+Visual components consume strongly-typed data objects in `src/data/`:
 
 ```
-MSChakravarthyConstructions/
-├── public/
-│   ├── favicon.png             # Circular emblem favicon
-│   ├── robots.txt              # Search engine crawler directives
-│   └── sitemap.xml             # XML sitemap for SEO indexing
-├── src/
-│   ├── assets/
-│   │   ├── logo.png            # Client lion emblem
-│   │   └── images/             # Optimized WebP site imagery (150-300KB each)
-│   │       ├── hero-main.webp
-│   │       ├── hero-team.webp
-│   │       ├── about-site.webp
-│   │       ├── service-constructions.webp
-│   │       ├── service-roads.webp
-│   │       ├── service-canals.webp
-│   │       ├── service-reservoirs.webp
-│   │       ├── service-checkdams.webp
-│   │       └── cta-banner.webp
-│   ├── pages/
-│   │   ├── HomePage.tsx         # Comprehensive landing page with all section highlights
-│   │   ├── AboutPage.tsx        # Dedicated page: 3-generation heritage & leadership
-│   │   ├── ServicesPage.tsx     # Dedicated page: in-depth 5 civil engineering disciplines
-│   │   ├── ReachPage.tsx        # Dedicated page: AP, Karnataka, Telangana & Pan-India
-│   │   └── ContactPage.tsx      # Dedicated page: WhatsApp form, IST hours & Google Maps
-│   ├── components/
-│   │   ├── LogoBadge.tsx        # Reusable circular badge enclosing logo
-│   │   ├── PillButton.tsx       # Pill button with sliding circular arrow (Link & Button)
-│   │   ├── RotatingTextBadge.tsx# Continuously rotating SVG badge in hero notch
-│   │   ├── SectionEyebrow.tsx   # "— SECTION LABEL —" editorial typography
-│   │   ├── CountUpStat.tsx      # Viewport-triggered animated statistics
-│   │   ├── ScrollToTop.tsx      # Smooth scroll-to-top on route navigation
-│   │   └── MobileStickyBar.tsx  # Sticky bottom Call + WhatsApp bar for phones
-│   ├── data/
-│   │   ├── images.ts            # Central image metadata registry
-│   │   └── site.ts              # Single source of truth for business data
-│   ├── hooks/
-│   │   └── useISTStatus.ts      # Computes live Open/Closed badge in IST
-│   ├── sections/
-│   │   ├── Navbar.tsx           # Floating glass pill navbar + mobile menu
-│   │   ├── Hero.tsx             # Bento hero with headline, stats, rotating badge
-│   │   ├── About.tsx            # Editorial statement & infrastructure site image
-│   │   ├── Services.tsx         # Black bento container with desktop image reveal
-│   │   ├── Reach.tsx            # 3 Outline numeral cards + Expanding India card
-│   │   ├── Leadership.tsx       # Yellow cards with executive monograms (no AI faces)
-│   │   ├── Approach.tsx         # 4-step phased project methodology
-│   │   ├── CTABanner.tsx        # Panoramic corridor banner with dual CTAs
-│   │   ├── FAQ.tsx              # Keyboard-accessible accordion from factual data
-│   │   ├── Contact.tsx          # Form (WhatsApp + mailto fallback), IST hours & Map
-│   │   └── Footer.tsx           # Dark rounded footer with quick links & legal
-│   ├── App.tsx                  # Root layout assembling sections in order
-│   ├── index.css                # Tailwind v4 `@theme` configuration
-│   └── main.tsx                 # Entry point with variable font imports
-├── index.html                   # Semantic markup with JSON-LD schema
-├── vite.config.ts               # Vite configuration with Tailwind v4 plugin
-└── package.json
+src/
+├── data/
+│   ├── site.ts           # Company metadata, dual offices, contact lines, licences, financials, services, FAQs
+│   ├── projects.ts       # Verified active and completed project records
+│   ├── credentials.ts    # Public-safe statutory & departmental credential register (derived from site.ts)
+│   └── images.ts         # Image metadata registry
+├── sections/
+│   ├── Navbar.tsx        # Glass-pill header with route links
+│   ├── Hero.tsx          # Bento hero with verified badges and metrics
+│   ├── About.tsx         # Firm statement
+│   ├── Services.tsx      # 5 core engineering disciplines (3D / photo viewer)
+│   ├── Projects.tsx      # Filterable project gallery (status & discipline chips)
+│   ├── Credentials.tsx   # Government registrations, statutory IDs, audited financials
+│   ├── Machinery.tsx     # Plant mobilization & heavy machinery deployment note
+│   ├── Leadership.tsx    # Managing partners
+│   ├── FAQ.tsx           # Tendering, subcontract, region and financial FAQs
+│   ├── Contact.tsx       # Dual-office cards + map switcher, direct dialers, inquiry form
+│   └── Footer.tsx        # Statutory identifiers, quick links, disclosures
+├── pages/                # Home, About, Services, Projects, Credentials, Reach, Contact
+└── components/           # Shared UI (PageHeader, PillButton, CountUpStat, 3D scenes, ...)
 ```
+
+---
+
+## 🏗️ Core Service Disciplines
+
+1. **Hard Rock Excavation, Drilling & Controlled Blasting** — deep-cut opencast excavation, 2.5m × 2.0m DTH wagon drilling, DGMS-licensed blasting, hydraulic rock breaking (<500mm).
+2. **Highway Earthworks, Embankment & Subgrade Formation** — bulk borrow excavation, long-lead hauling (>10 km), MoRTH Clause 305/407 subgrade at >10% soaked CBR.
+3. **Water Resources, Reservoirs & Check Dams** — earthen bunds, COT stabilization, sand blankets, rock-toe filters, 225–300mm dry rubble revetment, desilting.
+4. **Canal Networks, Off-Take Sluices & Industrial Drains** — SRSP high-level O.T. sluices, distributary lining, NP2/NP3 pipe crossings, industrial storm drains.
+5. **Tier-1 EPC Subcontract Execution & Fleet Mobilization** — 20T/30T excavators, breakers, tippers, dewatering, mining engineers and safety personnel under JMC.
+
+## 📋 Key Projects
+
+| Project | Client | Status | Value |
+|---|---|---|---|
+| 500 MW Chitravathi Pumped Storage Project | Adani PSP / APS Mining | Active | ₹16.99 Cr |
+| Bengaluru–Vijayawada Economic Corridor Pkg-4 | Dilip Buildcon / NHAI | Active | ₹3.40+ Cr billed |
+| NH-544D Muchukota–Bugga Section | MEIL | Active | ₹4.36 Cr |
+| Chennarayaswamy Irrigation Regulation System, Tanakal | Penukonda Division | Active | ₹33.24 L |
+| Gunipalli MI Tank Rehabilitation | APIIATP (World Bank) | Completed | ₹58.94 L |
+| Palamadugu Vagu New Reservoir, Adilabad | — | Completed | ₹2.35 Cr |
+| Sarala Sagar Modernization, Mahabubnagar | — | Completed | ₹3.42 Cr |
+| Utnoor Pendalguda Reservoir, Adilabad | — | Completed | ₹2.64 Cr |
+| APIIC Storm Water Drains, IDA Mallapur | APIIC | Completed | ₹2.28 Cr |
+| Koundinya River Diversion Weir, Chittoor | — | Completed | ₹1.81 Cr |
+
+Add further verified records to `src/data/projects.ts`; the gallery and filters pick them up automatically.
 
 ---
 
@@ -174,12 +190,13 @@ All site images are centrally defined in `src/data/images.ts`. To replace AI-gen
 3. Run `npm run build` to verify that dimensions and types match.
 
 ### Updating Business Information
-All text, phone numbers, email addresses, and services are defined in `src/data/site.ts`. Never modify components directly—simply update `src/data/site.ts` to keep the single source of truth updated across the entire site.
+Company metadata, offices, licences, financials and services live in `src/data/site.ts`; projects in `src/data/projects.ts`; the public credential register in `src/data/credentials.ts`. Update the data files rather than hard-coding text in components.
 
 ---
 
-## 🛡️ Honesty & Credibility Rules Upheld
-- **No Invented Statistics**: Only uses the verified 3 generations, 3 operational states (Karnataka, Andhra Pradesh, Telangana), and 5 services (Constructions, Roads, Canals, Reservoirs, Check Dams).
-- **No Fake People or Testimonials**: Leadership cards showcase executive monograms for Mr. D. Chakravarthy (Managing Director) and Mr. D. Nagaraju (Chairman), with zero synthetic faces.
-- **Genuine Southern India Visual Context**: All generated imagery captures realistic Deccan semi-arid terrain, red-brown soil, neem trees, and authentic civil construction machinery.
-- **Live Business Hours**: The contact section calculates real-time office availability in Indian Standard Time (IST, UTC+5:30).
+## 🔒 Statutory Privacy & Security Guidelines
+
+- **Zero-disclosure identifiers:** Partners' personal Aadhaar numbers are never committed to source, data files or image assets.
+- **Banking identifiers:** Bank account numbers, IFSC codes and cancelled cheque images are withheld from public bundles.
+- **Commercial redaction:** Subcontractor debit breakdowns, internal diesel recovery formulas and net margin schedules are excluded from public pages.
+- Only firm-level identifiers (Firm No., PAN, GSTINs, Udyam, contractor registration numbers, CA UDINs) are published.

@@ -43,7 +43,7 @@ export const CTABanner: React.FC = () => {
           </h2>
 
           <p className="text-neutral-300 text-xs sm:text-sm font-medium leading-relaxed mb-6 max-w-lg">
-            Partner with M/S Chakravarthy Constructions for highways, canals, reservoirs, check dams, and structural civil projects across Southern India and beyond.
+            Partner with M/s Chakravarthy Constructions for highways, canals, reservoirs, check dams, and structural civil projects across Southern India and beyond.
           </p>
 
           <div className="flex flex-wrap items-center gap-3">
