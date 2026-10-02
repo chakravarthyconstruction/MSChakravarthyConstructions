@@ -10,6 +10,7 @@ interface CountUpStatProps {
   className?: string;
   valueClassName?: string;
   labelClassName?: string;
+  suffixClassName?: string;
 }
 
 export const CountUpStat: React.FC<CountUpStatProps> = ({
@@ -22,6 +23,7 @@ export const CountUpStat: React.FC<CountUpStatProps> = ({
   className = '',
   valueClassName = '',
   labelClassName = '',
+  suffixClassName = '',
 }) => {
   const [count, setCount] = useState(() => {
     if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -74,16 +76,20 @@ export const CountUpStat: React.FC<CountUpStatProps> = ({
   }, [value, duration, decimals, hasAnimated]);
 
   return (
-    <div ref={containerRef} className={`flex flex-col ${className}`}>
+    <div ref={containerRef} className={`flex flex-col min-w-0 ${className}`}>
       <div
-        className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight font-heading ${valueClassName}`}
+        className={`flex items-baseline flex-nowrap font-extrabold tracking-tight font-heading whitespace-nowrap ${valueClassName || 'text-2xl sm:text-3xl lg:text-4xl'}`}
       >
         {prefix && <span>{prefix}</span>}
         <span>{decimals > 0 ? count.toFixed(decimals) : count}</span>
-        {suffix && <span className="text-[#C8102E] ml-0.5">{suffix}</span>}
-        {!suffix && <span className="text-[#C8102E] ml-0.5">+</span>}
+        {suffix && (
+          <span className={`ml-0.5 font-bold ${suffixClassName || 'text-[#C8102E]'}`}>{suffix}</span>
+        )}
+        {!suffix && (
+          <span className={`ml-0.5 font-bold ${suffixClassName || 'text-[#C8102E]'}`}>+</span>
+        )}
       </div>
-      <div className={`text-xs sm:text-sm font-medium opacity-80 mt-1 leading-snug ${labelClassName}`}>
+      <div className={`text-[10px] sm:text-xs font-medium opacity-85 mt-0.5 leading-snug line-clamp-1 ${labelClassName}`}>
         {label}
       </div>
     </div>

@@ -23,10 +23,10 @@ export const Services: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-        className="bg-[#0E0E0E] text-white rounded-[28px] sm:rounded-[36px] lg:rounded-[40px] p-6 sm:p-8 lg:p-10 relative overflow-hidden shadow-xl border border-white/10"
+        className="bg-[#0F172A] text-white rounded-[28px] sm:rounded-[36px] lg:rounded-[40px] p-6 sm:p-8 lg:p-10 relative overflow-hidden shadow-xl border border-slate-800"
       >
         {/* Subtle decorative glow */}
-        <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-[#0B3A5E]/20 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[350px] h-[350px] bg-[#C8102E]/15 rounded-full blur-[100px] pointer-events-none" />
 
         {/* Header */}
         <div className="relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 sm:pb-8 border-b border-white/15">

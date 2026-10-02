@@ -30,10 +30,10 @@ export const LogoBadge: React.FC<LogoBadgeProps> = ({
     >
       <img
         src={logoImg}
-        alt="Chakravarthy Constructions Emblem"
+        alt="M/S Chakravarthy Constructions Emblem"
         width={pixelSize}
         height={pixelSize}
-        className={`w-full h-full object-cover rounded-full transform scale-[1.08] ${imgClassName}`}
+        className={`w-full h-full object-contain p-0.5 rounded-full ${imgClassName}`}
         loading="eager"
         decoding="async"
       />

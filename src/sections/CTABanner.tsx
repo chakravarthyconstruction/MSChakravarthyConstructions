@@ -24,7 +24,7 @@ export const CTABanner: React.FC = () => {
 
         {/* Cinematic Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/40 pointer-events-none" />
-        <div className="absolute inset-0 bg-[#0B3A5E]/20 mix-blend-multiply pointer-events-none" />
+        <div className="absolute inset-0 bg-[#C8102E]/20 mix-blend-multiply pointer-events-none" />
 
         {/* Content Container */}
         <motion.div

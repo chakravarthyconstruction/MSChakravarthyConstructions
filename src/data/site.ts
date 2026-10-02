@@ -269,9 +269,9 @@ export const siteData: BusinessData = {
     ],
   },
   stats: [
-    { value: 26.5, suffix: '+ Cr', prefix: '₹', decimals: 2, label: '10-year contract receipts' },
-    { value: 10, suffix: ' Cr', prefix: '₹', label: 'AP WRD single-work tender limit' },
-    { value: 3, suffix: '', label: 'States of operation' },
+    { value: 26.5, suffix: ' Cr+', prefix: '₹', decimals: 1, label: '10-Yr Receipts' },
+    { value: 10, suffix: ' Cr', prefix: '₹', label: 'Single-Work Cap' },
+    { value: 3, suffix: '+', label: 'Key States' },
   ],
   about: {
     headline: 'A 20+ year trajectory in highways, heavy earthworks, rock and water.',
