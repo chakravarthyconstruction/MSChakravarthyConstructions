@@ -17,60 +17,9 @@ import { siteData } from '../data/site';
 import { SectionEyebrow } from '../components/SectionEyebrow';
 import { PillButton } from '../components/PillButton';
 import { ServiceScene3D } from '../components/ServiceScene3D';
-import type { ServiceId } from '../components/ServiceScene3D';
 import { CTABanner } from '../sections/CTABanner';
 
-// Technical engineering specifications per service
-const CIVIL_SPECS = [
-  { label: 'Structural Matrix', value: 'RCC Column-Beam Frame', icon: Layers },
-  { label: 'Concrete Grade', value: 'M35 / M40 Design Mix', icon: Activity },
-  { label: 'Rebar Spec', value: 'Fe550D High-Ductility TMT', icon: Cpu },
-  { label: 'Compliance Code', value: 'IS 456:2000 & NBC Standards', icon: Compass },
-];
-
-const ROADS_SPECS = [
-  { label: 'Pavement Hierarchy', value: 'Heavy Duty Asphalt & CC PQC', icon: Layers },
-  { label: 'Compaction Target', value: '≥ 98.8% Modified Proctor', icon: Activity },
-  { label: 'Bituminous Binder', value: 'VG-30 / Polymer Modified', icon: Cpu },
-  { label: 'Statutory Standard', value: 'MoRTH & IRC Specifications', icon: Compass },
-];
-
-const CANALS_SPECS = [
-  { label: 'Hydraulic Prism', value: 'Trapezoidal (1.5:1 Side Slope)', icon: Layers },
-  { label: 'Canal Bed Lining', value: 'Cast-In-Situ M15 100mm CC', icon: Activity },
-  { label: 'Design Velocity', value: '1.45 m/s Non-Scouring Flow', icon: Cpu },
-  { label: 'Water Regulators', value: 'Cast Iron & MS Sluice Gates', icon: Compass },
-];
-
-const RESERVOIRS_SPECS = [
-  { label: 'Embankment Typology', value: 'Zoned Earth-Fill with Clay Core', icon: Layers },
-  { label: 'Impervious CoT', value: 'Puddled Clay Cut-Off Trench', icon: Activity },
-  { label: 'Upstream Protection', value: 'Heavy Stone Rip-Rap Pitching', icon: Cpu },
-  { label: 'Hydrologic Safety', value: '1.5m High Flood Freeboard', icon: Compass },
-];
-
-const CHECKDAMS_SPECS = [
-  { label: 'Masonry Material', value: 'Random Rubble (RR) Stone in CM 1:4', icon: Layers },
-  { label: 'Weir Geometry', value: 'Broad-Crested Gravity Weir', icon: Activity },
-  { label: 'Energy Dissipator', value: 'Stepped Glacis Stilling Basin', icon: Cpu },
-  { label: 'Hydrogeology Goal', value: 'Subsurface Aquifer Recharge', icon: Compass },
-];
-
-const SERVICE_SPECS: Record<
-  string,
-  { label: string; value: string; icon: React.ComponentType<{ className?: string }> }[]
-> = {
-  constructions: CIVIL_SPECS,
-  'civil-constructions': CIVIL_SPECS,
-  roads: ROADS_SPECS,
-  'roads-construction': ROADS_SPECS,
-  canals: CANALS_SPECS,
-  'canals-construction': CANALS_SPECS,
-  reservoirs: RESERVOIRS_SPECS,
-  'reservoirs-construction': RESERVOIRS_SPECS,
-  checkdams: CHECKDAMS_SPECS,
-  'checkdams-construction': CHECKDAMS_SPECS,
-};
+const SPEC_ICONS = [Layers, Activity, Cpu, Compass];
 
 interface ServiceItemCardProps {
   service: (typeof siteData.services)[number];
@@ -80,7 +29,7 @@ interface ServiceItemCardProps {
 const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => {
   const [viewMode, setViewMode] = useState<'3d' | 'photo'>('3d');
   const isEven = index % 2 === 0;
-  const specs = SERVICE_SPECS[service.id] || [];
+  const specs = service.specs.map((spec, i) => ({ ...spec, icon: SPEC_ICONS[i % SPEC_ICONS.length] }));
 
   return (
     <motion.div
@@ -142,7 +91,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
                 className="w-full h-full"
               >
                 <ServiceScene3D
-                  serviceId={service.id as ServiceId}
+                  serviceId={service.scene}
                   className="w-full h-full rounded-[24px] border-0"
                 />
               </motion.div>
@@ -217,17 +166,15 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
           })}
         </div>
 
-        {/* Quality Milestones */}
-        <div className="w-full space-y-2 mb-6 pb-4 border-b border-black/10">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0E0E0E] font-semibold">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#F2C230] shrink-0" />
-            <span>Engineered to statutory standards and structural safety margins</span>
-          </div>
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#0E0E0E] font-semibold">
-            <CheckCircle2 className="w-3.5 h-3.5 text-[#F2C230] shrink-0" />
-            <span>Heavy machinery deployment tailored for Deccan regional terrain</span>
-          </div>
-        </div>
+        {/* Scope of Work */}
+        <ul className="w-full space-y-2 mb-6 pb-4 border-b border-black/10">
+          {service.scopes.map((scope) => (
+            <li key={scope} className="flex items-center gap-2 text-xs sm:text-sm text-[#0E0E0E] font-semibold">
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#F2C230] shrink-0" />
+              <span>{scope}</span>
+            </li>
+          ))}
+        </ul>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center gap-3">
@@ -236,7 +183,7 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
             variant="primary"
             ariaLabel={`Inquire about ${service.name}`}
           >
-            Inquire for {service.name}
+            Inquire for {service.shortName}
           </PillButton>
 
           <a
@@ -282,11 +229,11 @@ export const ServicesPage: React.FC = () => {
           <SectionEyebrow label="CORE COMPETENCIES & 3D SIMULATION" dark className="mb-3 relative z-10" />
 
           <h1 className="relative z-10 text-2xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-white font-heading tracking-tight leading-[1.14] max-w-3xl">
-            Five Core Infrastructure &amp; Civil Engineering Services
+            Five Core Engineering Disciplines
           </h1>
 
           <p className="relative z-10 mt-4 text-xs sm:text-sm text-neutral-300 font-medium max-w-2xl leading-relaxed">
-            Delivering robust public works across civil constructions, roadways, irrigation canals, water reservoirs, and stone check dams with generational expertise and interactive 3D engineering models.
+            Hard rock excavation and controlled blasting, highway earthworks, reservoirs and check dams, canal networks, and tier-1 EPC subcontract execution — delivered as a Class-1 civil contractor and EPC partner.
           </p>
 
           <div className="relative z-10 mt-6 flex flex-wrap items-center gap-3">

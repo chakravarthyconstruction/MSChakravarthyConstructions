@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, ArrowUp, ArrowUpRight } from 'lucide-react';
+import { Phone, Mail, MapPin, ArrowUp, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { siteData } from '../data/site';
 import { LogoBadge } from '../components/LogoBadge';
 
@@ -34,12 +34,12 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="text-neutral-400 text-xs sm:text-sm leading-relaxed max-w-sm mb-4">
-              Three generations of heavy civil engineering expertise delivering highways, irrigation canals, water reservoirs, check dams, and reinforced concrete structures across Southern India and nationwide.
+              {siteData.corporate.constitution} ({siteData.corporate.firmRegistration}). Class-1 civil contractor and tier-1 infrastructure subcontracting partner across Andhra Pradesh, Telangana and Karnataka.
             </p>
 
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[11px] font-mono text-neutral-300">
               <span className="w-1.5 h-1.5 rounded-full bg-[#FFF200]" />
-              <span>Registered in Anantapur, Andhra Pradesh</span>
+              <span>Est. {siteData.corporate.registrationDate}</span>
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export const Footer: React.FC = () => {
                     to={`/services#${service.id}`}
                     className="text-neutral-400 hover:text-white transition-colors font-medium flex items-center justify-between group py-0.5"
                   >
-                    <span>{service.name}</span>
+                    <span>{service.shortName}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity text-[#F2C230]" />
                   </Link>
                 </li>
@@ -88,26 +88,61 @@ export const Footer: React.FC = () => {
               Contact Desk
             </h4>
             <ul className="space-y-2.5 text-xs text-neutral-400">
-              <li className="flex items-start gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#F2C230] shrink-0 mt-0.5" />
-                <a href={siteData.phone.tel} className="hover:text-white transition-colors font-medium">
-                  {siteData.phone.display}
-                </a>
-              </li>
+              {siteData.contactLines.map((line) => (
+                <li key={line.tel} className="flex items-start gap-2">
+                  <Phone className="w-3.5 h-3.5 text-[#F2C230] shrink-0 mt-0.5" />
+                  <a href={line.tel} className="hover:text-white transition-colors font-medium" aria-label={`${line.label}: ${line.display}`}>
+                    {line.display}
+                  </a>
+                </li>
+              ))}
               <li className="flex items-start gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#F2C230] shrink-0 mt-0.5" />
                 <a href={`mailto:${siteData.email}`} className="hover:text-white transition-colors break-all font-medium">
                   {siteData.email}
                 </a>
               </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#F2C230] shrink-0 mt-0.5" />
-                <span className="leading-snug">
-                  1-410, 1st Road Ext., Dwaraka Nagar, Anantapur - 515004
-                </span>
-              </li>
+              {siteData.offices.map((office) => (
+                <li key={office.type} className="flex items-start gap-2">
+                  <MapPin className="w-3.5 h-3.5 text-[#F2C230] shrink-0 mt-0.5" />
+                  <span className="leading-snug">
+                    <span className="block text-neutral-300 font-semibold">{office.type}</span>
+                    {office.line2}, {office.city} – {office.pincode}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
+        </div>
+
+        {/* Statutory Identifiers */}
+        <div className="py-6 border-b border-white/10">
+          <h4 className="flex items-center gap-2 text-[11px] font-mono font-bold tracking-[0.22em] text-[#FFF200] uppercase mb-4">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            Statutory Identifiers
+          </h4>
+          <dl className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3 text-xs">
+            {[
+              { k: 'Firm Registration', v: `${siteData.corporate.firmRegistration} · ${siteData.corporate.registrar}` },
+              { k: 'PAN', v: siteData.corporate.pan },
+              ...siteData.corporate.gst.map((g) => ({ k: `GSTIN (${g.state})`, v: g.gstin })),
+              { k: 'MSME Udyam', v: `${siteData.corporate.msme.udyam} · ${siteData.corporate.msme.category}` },
+              ...siteData.corporate.contractorRegistrations.map((r) => ({
+                k: `${r.classification} — ${r.authority.replace('Government of ', 'Govt. of ')}`,
+                v: r.number,
+              })),
+            ].map((item) => (
+              <div key={item.k} className="min-w-0">
+                <dt className="text-neutral-500 font-medium">{item.k}</dt>
+                <dd className="text-neutral-200 font-mono font-semibold break-words">{item.v}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-5 text-[11px] text-neutral-500 leading-relaxed max-w-4xl">
+            Disclosure: Only firm-level statutory identifiers are published on this website. Personal identity numbers of partners,
+            bank account details and internal commercial schedules are withheld. Project values shown are as ordered or certified by the
+            respective clients; copies of certificates are furnished on request for tender and subcontract evaluation.
+          </p>
         </div>
 
         {/* Bottom Bar */}

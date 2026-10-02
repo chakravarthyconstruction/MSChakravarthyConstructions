@@ -10,7 +10,7 @@ export const About: React.FC = () => {
   return (
     <section
       id="about"
-      aria-label="About M/S Chakravarthy Constructions"
+      aria-label="About Chakravarthy Constructions"
       className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -43,7 +43,7 @@ export const About: React.FC = () => {
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
             <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0E0E0E] bg-white/70 p-2.5 rounded-xl border border-black/5">
               <CheckCircle2 className="w-4 h-4 text-[#F2C230] shrink-0" />
-              <span>Three Generations of Legacy</span>
+              <span>Est. 2009 · Firm No. 1520</span>
             </div>
             <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0E0E0E] bg-white/70 p-2.5 rounded-xl border border-black/5">
               <Compass className="w-4 h-4 text-[#F2C230] shrink-0" />

@@ -9,7 +9,7 @@ export const Leadership: React.FC = () => {
   return (
     <section
       id="leadership"
-      aria-label="Leadership - M/S Chakravarthy Constructions"
+      aria-label="Leadership - Chakravarthy Constructions"
       className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <motion.div
@@ -22,7 +22,7 @@ export const Leadership: React.FC = () => {
         <div>
           <SectionEyebrow label="OUR LEADERSHIP" className="mb-3" />
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0E0E0E] tracking-tight font-heading max-w-xl leading-tight">
-            Steered By Three Generations of Discipline
+            Led by Its Managing Partners
           </h2>
         </div>
         <p className="text-neutral-600 text-xs sm:text-sm max-w-sm font-medium leading-relaxed">
@@ -67,7 +67,7 @@ export const Leadership: React.FC = () => {
 
                   <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/10 text-[#0E0E0E] text-[11px] font-bold uppercase tracking-wider">
                     {index === 0 ? <Briefcase className="w-3 h-3" /> : <Award className="w-3 h-3" />}
-                    <span>Executive Council</span>
+                    <span>{leader.title}</span>
                   </div>
                 </div>
 
@@ -86,8 +86,8 @@ export const Leadership: React.FC = () => {
 
                 {/* Bottom: Signature Line */}
                 <div className="mt-6 pt-4 border-t border-black/15 flex items-center justify-between text-[11px] font-bold uppercase tracking-widest text-[#0E0E0E]/70 font-mono">
-                  <span>M/S Chakravarthy</span>
-                  <span>Anantapur, AP</span>
+                  <span>Chakravarthy</span>
+                  <span>Hyderabad · Anantapur</span>
                 </div>
               </div>
             </ParallaxTiltCard>

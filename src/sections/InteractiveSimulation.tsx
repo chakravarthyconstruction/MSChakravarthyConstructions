@@ -50,7 +50,7 @@ export const InteractiveSimulation: React.FC = () => {
               <Compass className="w-4 h-4 text-[#F2C230] shrink-0" />
               <div>
                 <div className="text-[10px] font-mono text-neutral-400 uppercase">Station</div>
-                <div className="text-xs font-bold font-heading text-[#0E0E0E]">Anantapur AP</div>
+                <div className="text-xs font-bold font-heading text-[#0E0E0E]">Hyderabad · Anantapur</div>
               </div>
             </div>
 
