@@ -80,7 +80,7 @@ export const Contact: React.FC = () => {
   };
 
   const buildWhatsAppText = () => {
-    return `Hello M/s Chakravarthy Constructions,\n\nI would like to inquire about: *${formData.service}*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Message:* ${formData.message}\n\nSubmitted via website: mschakravarthyconstructions.com`;
+    return `Hello Chakravarthy Constructions,\n\nI would like to inquire about: *${formData.service}*\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email}\n*Message:* ${formData.message}\n\nSubmitted via website: mschakravarthyconstructions.com`;
   };
 
   const buildMailtoUrl = () => {
@@ -113,7 +113,7 @@ export const Contact: React.FC = () => {
   return (
     <section
       id="contact"
-      aria-label="Contact M/s Chakravarthy Constructions"
+      aria-label="Contact Chakravarthy Constructions"
       className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <motion.div

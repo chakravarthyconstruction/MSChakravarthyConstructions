@@ -1,12 +1,12 @@
-# M/s Chakravarthy Constructions — Corporate Web Platform
+# Chakravarthy Constructions — Corporate Web Platform
 
-Production website and content repository for **M/s Chakravarthy Constructions**, a Class-1 civil contractor and tier-1 infrastructure subcontracting partner operating across Andhra Pradesh, Telangana, and Karnataka.
+Production website and content repository for **Chakravarthy Constructions**, a Class-1 civil contractor and tier-1 infrastructure subcontracting partner operating across Andhra Pradesh, Telangana, and Karnataka.
 
 ---
 
 ## 1. Verified Corporate Profile
 
-- **Legal Entity:** M/s Chakravarthy Constructions
+- **Legal Entity:** Chakravarthy Constructions
 - **Constitution:** Registered Partnership Firm — Firm No. 1520 of 2009, registered under Section 58(1) of the Indian Partnership Act, 1932 by the Registrar of Firms, Ranga Reddy District
 - **Registration Date:** 22nd August 2009
 - **PAN:** AAGFC3799N

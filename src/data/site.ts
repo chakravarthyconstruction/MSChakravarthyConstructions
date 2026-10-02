@@ -164,8 +164,8 @@ export interface BusinessData {
 }
 
 export const siteData: BusinessData = {
-  name: 'M/s Chakravarthy Constructions',
-  shortName: 'M/s Chakravarthy',
+  name: 'Chakravarthy Constructions',
+  shortName: 'Chakravarthy',
   tagline: 'Class-1 Civil Contractor & Tier-1 Infrastructure Partner.',
   subTagline:
     'Hard rock excavation, controlled blasting, highway earthworks, reservoirs, check dams and canal networks across Andhra Pradesh, Telangana and Karnataka.',
@@ -211,7 +211,7 @@ export const siteData: BusinessData = {
     sunday: 'Sunday Holiday',
   },
   corporate: {
-    legalName: 'M/s Chakravarthy Constructions',
+    legalName: 'Chakravarthy Constructions',
     constitution: 'Registered Partnership Firm',
     firmRegistration: 'Firm No. 1520 of 2009',
     registrationAct: 'Section 58(1), Indian Partnership Act, 1932',
@@ -276,7 +276,7 @@ export const siteData: BusinessData = {
   about: {
     headline: 'A 20+ year trajectory in heavy earthworks, rock and water.',
     statement:
-      'M/s Chakravarthy Constructions is a registered partnership firm (Firm No. 1520 of 2009) and a Class-1 civil contractor with the Water Resources Department, Government of Andhra Pradesh, and the Public Works Department, Government of Karnataka.',
+      'Chakravarthy Constructions is a registered partnership firm (Firm No. 1520 of 2009) and a Class-1 civil contractor with the Water Resources Department, Government of Andhra Pradesh, and the Public Works Department, Government of Karnataka.',
     summary:
       'Led by Chairman & Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm executes reservoirs, check dams, canal networks, highway earthworks and hard rock excavation across Andhra Pradesh, Telangana and Karnataka — both as a direct government contractor and as a tier-1 subcontracting partner to leading EPC companies.',
     experienceBadge: 'Class-1 Civil Contractor · Est. 2009',

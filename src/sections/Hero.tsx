@@ -13,7 +13,7 @@ export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      aria-label="Hero - M/s Chakravarthy Constructions"
+      aria-label="Hero - Chakravarthy Constructions"
       className="relative pt-20 sm:pt-24 md:pt-28 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
@@ -52,7 +52,7 @@ export const Hero: React.FC = () => {
           {/* Middle: Headline & Supporting Text */}
           <div className="my-auto py-1">
             <span className="inline-block text-[11px] font-mono font-bold tracking-widest text-[#0E0E0E]/80 uppercase mb-2.5">
-              — M/s CHAKRAVARTHY CONSTRUCTIONS · FIRM NO. 1520 OF 2009 —
+              — CHAKRAVARTHY CONSTRUCTIONS · FIRM NO. 1520 OF 2009 —
             </span>
             <h1 className="text-2xl sm:text-4xl lg:text-[2.65rem] xl:text-[2.9rem] font-extrabold text-[#0E0E0E] leading-[1.12] tracking-tight font-heading">
               {siteData.tagline}

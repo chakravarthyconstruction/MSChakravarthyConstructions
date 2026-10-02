@@ -67,7 +67,7 @@ export const AboutPage: React.FC = () => {
             </h2>
             <div className="space-y-3 text-neutral-700 text-xs sm:text-sm leading-relaxed">
               <p className="font-medium text-[#0E0E0E]/90">
-                Registered on 22nd August 2009 under Section 58(1) of the Indian Partnership Act, 1932 by the Registrar of Firms, Ranga Reddy District, M/s Chakravarthy Constructions builds on a family practice in civil works spanning more than two decades.
+                Registered on 22nd August 2009 under Section 58(1) of the Indian Partnership Act, 1932 by the Registrar of Firms, Ranga Reddy District, Chakravarthy Constructions builds on a family practice in civil works spanning more than two decades.
               </p>
               <p>
                 Under Chairman & Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm has delivered reservoir formations in Adilabad, the Sarala Sagar modernization in Mahabubnagar, World Bank-assisted tank rehabilitation in Ananthapuramu, and today executes rock and earthworks on the 500 MW Chitravathi pumped storage project and NHAI greenfield corridors.

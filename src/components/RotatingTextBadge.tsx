@@ -8,7 +8,7 @@ interface RotatingTextBadgeProps {
 }
 
 export const RotatingTextBadge: React.FC<RotatingTextBadgeProps> = ({
-  text = 'M/s CHAKRAVARTHY CONSTRUCTIONS • 3 GENERATIONS • ',
+  text = 'CHAKRAVARTHY CONSTRUCTIONS • 3 GENERATIONS • ',
   size = 148,
   className = '',
 }) => {

@@ -21,7 +21,7 @@ export const siteImages: Record<string, ImageMeta> = {
     src: logo,
     width: 512,
     height: 512,
-    alt: 'M/s Chakravarthy Constructions Emblem Logo',
+    alt: 'Chakravarthy Constructions Emblem Logo',
   },
   heroMain: {
     src: heroMain,

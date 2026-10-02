@@ -9,7 +9,7 @@ export const Leadership: React.FC = () => {
   return (
     <section
       id="leadership"
-      aria-label="Leadership - M/s Chakravarthy Constructions"
+      aria-label="Leadership - Chakravarthy Constructions"
       className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <motion.div
@@ -86,7 +86,7 @@ export const Leadership: React.FC = () => {
 
                 {/* Bottom: Signature Line */}
                 <div className="mt-6 pt-4 border-t border-black/15 flex items-center justify-between text-[11px] font-bold uppercase tracking-widest text-[#0E0E0E]/70 font-mono">
-                  <span>M/s Chakravarthy</span>
+                  <span>Chakravarthy</span>
                   <span>Hyderabad · Anantapur</span>
                 </div>
               </div>

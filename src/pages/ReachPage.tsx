@@ -31,7 +31,7 @@ export const ReachPage: React.FC = () => {
           </h1>
 
           <p className="mt-4 text-xs sm:text-sm text-[#0E0E0E]/85 font-medium max-w-2xl leading-relaxed">
-            From our head office in Kukatpally, Hyderabad and branch office in Anantapur, M/s Chakravarthy Constructions executes reservoirs, highway earthworks, rock excavation and canal works across Andhra Pradesh, Telangana and Karnataka.
+            From our head office in Kukatpally, Hyderabad and branch office in Anantapur, Chakravarthy Constructions executes reservoirs, highway earthworks, rock excavation and canal works across Andhra Pradesh, Telangana and Karnataka.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2.5">

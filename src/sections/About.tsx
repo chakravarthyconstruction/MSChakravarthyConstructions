@@ -10,7 +10,7 @@ export const About: React.FC = () => {
   return (
     <section
       id="about"
-      aria-label="About M/s Chakravarthy Constructions"
+      aria-label="About Chakravarthy Constructions"
       className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
