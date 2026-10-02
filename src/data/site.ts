@@ -164,7 +164,7 @@ export interface BusinessData {
 }
 
 export const siteData: BusinessData = {
-  name: 'M/S Chakravarthy Constructions',
+  name: 'Chakravarthy Constructions',
   shortName: 'Chakravarthy',
   tagline: 'Special Class Contractor & Civil Infrastructure Partner.',
   subTagline:
@@ -211,7 +211,7 @@ export const siteData: BusinessData = {
     sunday: 'Sunday Holiday',
   },
   corporate: {
-    legalName: 'M/S Chakravarthy Constructions',
+    legalName: 'Chakravarthy Constructions',
     constitution: 'Registered Partnership Firm',
     firmRegistration: 'Special Class Contractor',
     registrationAct: 'Section 58(1), Indian Partnership Act, 1932',
@@ -276,7 +276,7 @@ export const siteData: BusinessData = {
   about: {
     headline: 'A 20+ year trajectory in highways, heavy earthworks, rock and water.',
     statement:
-      'M/S Chakravarthy Constructions is a Special Class Contractor registered with the Water Resources Department, Government of Andhra Pradesh, and the Public Works Department, Government of Karnataka.',
+      'Chakravarthy Constructions is a Special Class Contractor registered with the Water Resources Department, Government of Andhra Pradesh, and the Public Works Department, Government of Karnataka.',
     summary:
       'Led by Chairman & Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm executes major highways and road projects, bulk earth works, reservoirs, check dams, canal networks and hard rock excavation across Andhra Pradesh, Telangana and Karnataka — both as a direct government contractor and as an execution partner to leading infrastructure majors.',
     experienceBadge: 'Special Class Contractor · Est. 2009',

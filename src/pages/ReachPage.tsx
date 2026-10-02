@@ -31,7 +31,7 @@ export const ReachPage: React.FC = () => {
           </h1>
 
           <p className="mt-4 text-xs sm:text-sm text-white/90 font-medium max-w-2xl leading-relaxed">
-            From our head office in Kukatpally, Hyderabad and regional office in Anantapur, M/S Chakravarthy Constructions executes highways and road projects, bulk earth works, reservoirs, and canal infrastructure across Andhra Pradesh, Telangana, and Karnataka.
+            From our head office in Kukatpally, Hyderabad and regional office in Anantapur, Chakravarthy Constructions executes highways and road projects, bulk earth works, reservoirs, and canal infrastructure across Andhra Pradesh, Telangana, and Karnataka.
           </p>
 
           <div className="mt-6 flex flex-wrap items-center gap-2.5">

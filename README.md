@@ -1,12 +1,12 @@
-# M/S Chakravarthy Constructions — Corporate Web Platform
+# Chakravarthy Constructions — Corporate Web Platform
 
-Production website and content repository for **M/S Chakravarthy Constructions**, a Special Class Contractor and civil infrastructure partner operating across Andhra Pradesh, Telangana, and Karnataka.
+Production website and content repository for **Chakravarthy Constructions**, a Special Class Contractor and civil infrastructure partner operating across Andhra Pradesh, Telangana, and Karnataka.
 
 ---
 
 ## 1. Verified Corporate Profile
 
-- **Legal Entity:** M/S Chakravarthy Constructions
+- **Legal Entity:** Chakravarthy Constructions
 - **Constitution:** Registered Partnership Firm
 - **Contractor Classification:** Special Class Contractor
 - **PAN:** AAGFC3799N

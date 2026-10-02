@@ -120,7 +120,7 @@ export const Leadership: React.FC = () => {
                         : 'border-black/10 text-slate-500'
                     }`}
                   >
-                    <span>M/S Chakravarthy</span>
+                    <span>Chakravarthy</span>
                     <span>Anantapur · Hyderabad</span>
                   </div>
                 </div>

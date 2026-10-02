@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
           {/* Middle: Eyebrow, Headline & Body */}
           <div className="my-auto py-1">
             <span className="inline-block text-[10px] sm:text-[11px] font-mono font-bold tracking-widest text-white/80 uppercase mb-2">
-              — M/S CHAKRAVARTHY CONSTRUCTIONS —
+              — CHAKRAVARTHY CONSTRUCTIONS —
             </span>
             <h1 className="text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-extrabold text-white leading-[1.12] tracking-tight font-heading">
               Building Heavy Infrastructure That Lasts Generations.

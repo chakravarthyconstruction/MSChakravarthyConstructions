@@ -68,7 +68,7 @@ export const AboutPage: React.FC = () => {
             </h2>
             <div className="space-y-3 text-neutral-700 text-xs sm:text-sm leading-relaxed">
               <p className="font-medium text-[#0F172A]/90">
-                Operating across Andhra Pradesh, Telangana, and Karnataka with corporate presence in Hyderabad and regional headquarters in Anantapur, M/S Chakravarthy Constructions builds on a proud family practice in civil engineering and infrastructure spanning more than two decades across three generations.
+                Operating across Andhra Pradesh, Telangana, and Karnataka with corporate presence in Hyderabad and regional headquarters in Anantapur, Chakravarthy Constructions builds on a proud family practice in civil engineering and infrastructure spanning more than two decades across three generations.
               </p>
               <p>
                 Under Chairman &amp; Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm has delivered reservoir formations in Adilabad, the Sarala Sagar modernization in Mahabubnagar, World Bank-assisted tank rehabilitation in Ananthapuramu, and today executes rock and earthworks on the 500 MW Chitravathi pumped storage project, major highways, and NHAI greenfield corridors.

@@ -59,12 +59,12 @@ export const Navbar: React.FC = () => {
             <Link
               to="/"
               className="flex items-center gap-3 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C8102E] rounded-full pr-2"
-              aria-label="M/S Chakravarthy Constructions Homepage"
+              aria-label="Chakravarthy Constructions Homepage"
             >
               <LogoBadge size={isScrolled ? 38 : 42} className="transition-transform group-hover:scale-105 shrink-0" />
               <div className="flex flex-col">
                 <span className="font-black text-sm sm:text-base tracking-tight font-heading leading-tight text-[#0F172A]">
-                  M/S Chakravarthy
+                  Chakravarthy
                 </span>
                 <span className="text-[9px] sm:text-[10px] font-bold tracking-[0.24em] text-neutral-600 uppercase leading-none mt-0.5">
                   Constructions

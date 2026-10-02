@@ -30,7 +30,7 @@ export const LogoBadge: React.FC<LogoBadgeProps> = ({
     >
       <img
         src={logoImg}
-        alt="M/S Chakravarthy Constructions Emblem"
+        alt="Chakravarthy Constructions Emblem"
         width={pixelSize}
         height={pixelSize}
         className={`w-full h-full object-contain p-0.5 rounded-full ${imgClassName}`}
