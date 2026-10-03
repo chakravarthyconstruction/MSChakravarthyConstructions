@@ -156,7 +156,7 @@ export const Leadership: React.FC = () => {
           <div className="flex items-center gap-2 mb-4">
             <span className="h-px flex-1 bg-black/10" />
             <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-neutral-500 px-2 py-0.5 rounded-full bg-neutral-100 border border-black/5">
-              Project Directors, Site Operations &amp; Vendor Management (VMO)
+              Project Directors, Projects Head &amp; Site Management
             </span>
             <span className="h-px flex-1 bg-black/10" />
           </div>
