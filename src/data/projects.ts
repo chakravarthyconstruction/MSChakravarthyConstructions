@@ -86,7 +86,6 @@ export const projects: Project[] = [
     heroImage: '/projects/project-3/hero.webp',
     gallery: [
       '/projects/project-3/img-1.webp',
-      '/projects/project-3/img-2.webp',
       '/projects/project-3/img-3.webp',
       '/projects/project-3/img-4.webp',
     ],
