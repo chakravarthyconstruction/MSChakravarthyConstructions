@@ -8,12 +8,12 @@ import { RotatingTextBadge } from '../components/RotatingTextBadge';
 import { CountUpStat } from '../components/CountUpStat';
 import { MagneticElement } from '../components/MagneticElement';
 
-export const Hero: React.FC = () => {
+export const Hero: React.FC<{ isBelowBanner?: boolean }> = ({ isBelowBanner = true }) => {
   return (
     <section
       id="home"
       aria-label="Hero - Chakravarthy Constructions"
-      className="relative pt-20 sm:pt-24 pb-4 sm:pb-6 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
+      className={`relative ${isBelowBanner ? 'pt-2 sm:pt-4' : 'pt-20 sm:pt-24'} pb-4 sm:pb-6 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden`}
     >
       <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
         {/* Left Bento: Crimson Red Architectural Panel */}

@@ -1,6 +1,6 @@
 import { siteData } from './site';
 
-export type CredentialGroup = 'Statutory' | 'Contractor Registration' | 'Financial';
+export type CredentialGroup = 'Statutory' | 'Contractor Registration';
 
 export interface Credential {
   id: string;
@@ -59,13 +59,5 @@ export const credentials: Credential[] = [
     issuer: `${r.department}, ${r.authority}`,
     reference: r.number,
     detail: r.note,
-  })),
-  ...corporate.financials.map((f) => ({
-    id: `fin-${f.udin}`,
-    group: 'Financial' as const,
-    title: `${f.label}: ${f.value}`,
-    issuer: corporate.auditor,
-    reference: `UDIN ${f.udin}`,
-    detail: f.detail,
   })),
 ];

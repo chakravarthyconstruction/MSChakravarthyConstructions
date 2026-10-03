@@ -101,8 +101,8 @@ export interface CorporateProfile {
     nicDescription: string;
   };
   contractorRegistrations: ContractorRegistration[];
-  auditor: string;
-  financials: FinancialFigure[];
+  auditor?: string;
+  financials?: FinancialFigure[];
 }
 
 export interface BusinessData {
@@ -252,26 +252,11 @@ export const siteData: BusinessData = {
         number: 'CBS/C1/CIVIL/11740/2019',
       },
     ],
-    auditor: 'M/s Lokireddy & Co., Chartered Accountants',
-    financials: [
-      {
-        label: 'Audited Net Worth',
-        value: '₹3,10,79,450/-',
-        detail: 'As of 29-04-2025',
-        udin: '25230189BMJOWK6170',
-      },
-      {
-        label: '10-Year Contract Receipts',
-        value: '₹26.50+ Crores',
-        detail: 'Cumulative turnover; ₹6.55 Crores in FY 2024-25',
-        udin: '25209099BMNYXU9552',
-      },
-    ],
   },
   stats: [
     { value: 50, suffix: '+ Cr', prefix: '₹', label: 'Ongoing Projects' },
-    { value: 26.5, suffix: '+ Cr', prefix: '₹', decimals: 1, label: '10-Yr Turnover' },
-    { value: 3, suffix: '+', label: 'Key States' },
+    { value: 40, suffix: '+ Yrs', label: 'Engineering Trajectory' },
+    { value: 10, suffix: '+', label: 'Key Projects' },
   ],
   about: {
     headline: 'A 40+ year trajectory in heavy earthworks, reservoirs, roads & highways.',
@@ -428,18 +413,36 @@ export const siteData: BusinessData = {
   ],
   leadership: [
     {
-      name: 'Sri D. Nagaraju',
+      name: 'DHARMAVARAM NAGARAJU',
       role: 'Chairman & Founder',
-      title: 'Managing Partner',
+      title: 'Founder & Chairman',
       initials: 'DN',
-      bio: 'Founded the firm and guides its governance, departmental relationships and long-standing client partnerships.',
+      photo: '/images/leadership/nagaraju-chairman.webp',
+      bio: 'Founded the firm and steers strategic governance, institutional client relationships, and a 40+ year multi-generational engineering trajectory across Andhra Pradesh, Telangana, and Karnataka.',
     },
     {
-      name: 'Sri D. Chakravarthy',
+      name: 'DHARMAVARAM CHAKRAVARTHY',
       role: 'Managing Director',
-      title: 'Managing Partner',
+      title: 'Managing Director',
       initials: 'DC',
-      bio: 'Leads project execution, EPC subcontract delivery and fleet mobilization across Andhra Pradesh, Telangana and Karnataka.',
+      photo: '/images/leadership/chakravarthy-md.webp',
+      bio: 'Directs turnkey project delivery, heavy machinery fleet mobilization, highway economic corridors, water reservoirs, and specialized Irrigation Department works.',
+    },
+    {
+      name: 'Project Director',
+      role: 'Executive Director — Projects',
+      title: 'Technical & Site Operations',
+      initials: 'PD',
+      photo: '/images/leadership/project-director-1.webp',
+      bio: 'Supervises on-site engineering execution, surveying, quality assurance, and subgrade compaction across multi-lane highways and dams.',
+    },
+    {
+      name: 'Operations Director',
+      role: 'Executive Director — Operations & Fleet',
+      title: 'Plant & Heavy Fleet Management',
+      initials: 'OD',
+      photo: '/images/leadership/project-director-2.webp',
+      bio: 'Directs heavy machinery mobilization, quarrying logistics, crushing operations, and inter-state corridor plant deployment.',
     },
   ],
   approach: [
@@ -493,9 +496,9 @@ export const siteData: BusinessData = {
         'We operate across Andhra Pradesh, Telangana and Karnataka, with a head office in Kukatpally, Hyderabad and a branch office in Dwaraka Nagar, Anantapur. We hold GST registrations in both Andhra Pradesh and Telangana.',
     },
     {
-      question: 'What is your audited financial standing?',
+      question: 'What is your current infrastructure delivery capacity?',
       answer:
-        'As certified by M/s Lokireddy & Co., Chartered Accountants, our net worth is ₹3,10,79,450/- as of 29-04-2025, and our 10-year cumulative contract receipts exceed ₹26.50 Crores, reaching ₹6.55 Crores in FY 2024-25.',
+        'With over ₹50+ Crores in ongoing infrastructure projects and a 40+ year multi-generational engineering trajectory, we maintain deep operational capacity across heavy earthworks, reservoirs, canals, and multi-lane national highways.',
     },
     {
       question: 'Is the firm MSME registered?',

@@ -9,7 +9,7 @@ export const CredentialsPage: React.FC = () => (
       crumb="Credentials"
       eyebrow="COMPLIANCE LIBRARY"
       title="Government Registrations & Statutory Approvals"
-      intro="Special Class Contractor registrations with the Governments of Andhra Pradesh and Karnataka, dual-state GST, MSME Udyam registration, and an audited financial baseline certified by Chartered Accountants."
+      intro="Special Class Contractor registrations with the Governments of Andhra Pradesh and Karnataka, dual-state GST, MSME Udyam registration, and 40+ years of infrastructure delivery credentials."
     />
     <Credentials />
     <CTABanner />

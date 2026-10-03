@@ -30,17 +30,17 @@ export const Leadership: React.FC = () => {
         </p>
       </motion.div>
 
-      {/* Two Premium Leadership Cards with 3D Parallax Tilt */}
+      {/* Leadership Cards with 3D Parallax Tilt */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
         {siteData.leadership.map((leader, index) => {
-          const isDark = index === 0;
+          const isDark = index % 2 === 0;
           return (
             <motion.div
               key={leader.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="h-full"
             >
               <ParallaxTiltCard className="h-full rounded-[28px] sm:rounded-[32px]" maxTilt={6}>
@@ -54,13 +54,13 @@ export const Leadership: React.FC = () => {
                   {/* Top row: Monogram or Real Photo if available */}
                   <div className="flex items-start justify-between gap-4 mb-6">
                     {leader.photo ? (
-                      <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-full overflow-hidden border-3 border-black/20 shadow-md">
+                      <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-2xl overflow-hidden border-2 border-white/20 shadow-md bg-slate-800 shrink-0">
                         <img
                           src={leader.photo}
                           alt={leader.name}
-                          width={80}
-                          height={80}
-                          className="w-full h-full object-cover"
+                          width={96}
+                          height={112}
+                          className="w-full h-full object-cover object-top"
                           loading="lazy"
                         />
                       </div>

@@ -73,9 +73,6 @@ export const AboutPage: React.FC = () => {
               <p>
                 Under Chairman &amp; Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm specializes extensively in Irrigation Department works — having delivered major reservoir formations in Adilabad, the Sarala Sagar modernization in Mahabubnagar, World Bank-assisted tank rehabilitation in Ananthapuramu, and currently executing over ₹50+ Crores in active infrastructure projects including rock and earthworks on the 500 MW Chitravathi pumped storage project, major highways, and NHAI greenfield corridors.
               </p>
-              <p>
-                The firm's audited net worth stands at ₹3,10,79,450/- (29-04-2025) with cumulative 10-year contract receipts of ₹26.50+ Crores, reaching ₹6.55 Crores in FY 2024-25.
-              </p>
             </div>
 
             {/* Credibility Pillars */}

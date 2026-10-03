@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { FileCheck2, Landmark, BadgeIndianRupee, Lock } from 'lucide-react';
+import { FileCheck2, Landmark, Lock } from 'lucide-react';
 import { credentials } from '../data/credentials';
 import type { CredentialGroup } from '../data/credentials';
 import { SectionEyebrow } from '../components/SectionEyebrow';
@@ -9,7 +9,6 @@ import { PillButton } from '../components/PillButton';
 const GROUPS: { group: CredentialGroup; heading: string; icon: React.ComponentType<{ className?: string }> }[] = [
   { group: 'Contractor Registration', heading: 'Government Contractor Registrations', icon: Landmark },
   { group: 'Statutory', heading: 'Statutory Registrations', icon: FileCheck2 },
-  { group: 'Financial', heading: 'Audited Financial Baseline', icon: BadgeIndianRupee },
 ];
 
 interface CredentialsProps {
@@ -31,7 +30,7 @@ export const Credentials: React.FC<CredentialsProps> = ({ compact = false }) => 
           <div>
             <SectionEyebrow label="CREDENTIALS" dark className="mb-3" />
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight font-heading max-w-xl leading-tight">
-              Registered, Licensed &amp; Audited
+              Registered &amp; Special Class Licensed
             </h2>
           </div>
           <p className="text-neutral-400 text-xs sm:text-sm max-w-sm leading-relaxed">
