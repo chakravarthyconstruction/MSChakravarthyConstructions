@@ -179,8 +179,8 @@ export const siteData: BusinessData = {
   contactLines: [
     { label: 'Primary Corporate Line (Chairman)', display: '+91 81257 25425', tel: 'tel:+918125725425' },
     { label: 'Project Operations Desk (Managing Director)', display: '+91 63051 67125', tel: 'tel:+916305167125' },
-    { label: 'Project Director (B. Sreemanth Reddy)', display: '+91 89782 52926', tel: 'tel:+918978252926' },
     { label: 'Project Director (M. Chandra Babu)', display: '+91 97381 67330', tel: 'tel:+919738167330' },
+    { label: 'Project Director (B. Sreemanth Reddy)', display: '+91 89782 52926', tel: 'tel:+918978252926' },
     { label: 'Projects Head (V. Indrasenareddy)', display: '+91 91773 60660', tel: 'tel:+919177360660' },
     { label: 'Project Manager (Sathish Reddy)', display: '+91 96406 88800', tel: 'tel:+919640688800' },
     { label: 'Vendor Management Office Lead (V. Durga Rao)', display: '+91 80195 35767', tel: 'tel:+918019535767' },
@@ -437,15 +437,6 @@ export const siteData: BusinessData = {
       bio: 'Directs turnkey project delivery, heavy machinery fleet mobilization, highway economic corridors, water reservoirs, and specialized Irrigation Department works.',
     },
     {
-      name: 'BOMMIREDDY SREEMANTH REDDY',
-      role: 'Project Director',
-      title: 'Executive Director — Projects',
-      initials: 'BSR',
-      photo: '/images/leadership/sreemanth-reddy.webp',
-      phone: '+91 89782 52926',
-      bio: 'Supervises on-site engineering execution, surveying, quality assurance, and subgrade compaction across multi-lane highways and dams.',
-    },
-    {
       name: 'M CHANDRA BABU',
       role: 'Project Director',
       title: 'Executive Director — Projects & Operations',
@@ -453,6 +444,15 @@ export const siteData: BusinessData = {
       photo: '/images/leadership/chandra-babu.webp',
       phone: '+91 97381 67330',
       bio: 'Directs heavy machinery mobilization, quarrying logistics, crushing operations, and inter-state corridor plant deployment.',
+    },
+    {
+      name: 'BOMMIREDDY SREEMANTH REDDY',
+      role: 'Project Director',
+      title: 'Executive Director — Projects',
+      initials: 'BSR',
+      photo: '/images/leadership/sreemanth-reddy.webp',
+      phone: '+91 89782 52926',
+      bio: 'Supervises on-site engineering execution, surveying, quality assurance, and subgrade compaction across multi-lane highways and dams.',
     },
     {
       name: 'VARADAREDDY INDRASENAREDDY',
