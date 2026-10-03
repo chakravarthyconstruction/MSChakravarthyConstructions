@@ -433,6 +433,7 @@ export const siteData: BusinessData = {
       role: 'Project Director',
       title: 'Executive Director — Projects',
       initials: 'BSR',
+      photo: '/images/leadership/sreemanth-reddy.webp',
       bio: 'Supervises on-site engineering execution, surveying, quality assurance, and subgrade compaction across multi-lane highways and dams.',
     },
     {
@@ -440,6 +441,7 @@ export const siteData: BusinessData = {
       role: 'Project Director',
       title: 'Executive Director — Projects & Operations',
       initials: 'MCB',
+      photo: '/images/leadership/chandra-babu.webp',
       bio: 'Directs heavy machinery mobilization, quarrying logistics, crushing operations, and inter-state corridor plant deployment.',
     },
   ],
