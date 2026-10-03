@@ -33,12 +33,12 @@ export const Services: React.FC = () => {
           <div>
             <SectionEyebrow label="WHAT WE DO" dark className="mb-3" />
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight font-heading max-w-xl leading-tight">
-              Comprehensive Civil Works &amp; Infrastructure
+              Civil Works, Earthworks &amp; Irrigation Infrastructure
             </h2>
           </div>
           <div className="flex flex-col items-start md:items-end gap-2">
-            <p className="text-neutral-400 text-xs sm:text-sm max-w-sm font-medium leading-relaxed md:text-right">
-              Delivering robust public works across five core infrastructure domains with generational engineering discipline.
+            <p className="text-neutral-300 text-xs sm:text-sm max-w-sm font-medium leading-relaxed md:text-right">
+              40+ year legacy delivering Irrigation Department works, reservoirs, highways, and bulk earthworks with generational precision.
             </p>
             <Link
               to="/services"

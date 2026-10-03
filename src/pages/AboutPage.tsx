@@ -32,7 +32,7 @@ export const AboutPage: React.FC = () => {
           <SectionEyebrow label="HERITAGE & LEADERSHIP" className="mb-3" />
 
           <h1 className="text-2xl sm:text-4xl lg:text-[2.6rem] font-extrabold text-white font-heading tracking-tight leading-[1.14] max-w-3xl">
-            Three Generations of Civil Construction Heritage
+            40+ Year Trajectory in Heavy Earthworks, Reservoirs &amp; Highways
           </h1>
 
           <p className="mt-4 text-sm sm:text-base text-white/90 font-medium max-w-2xl leading-relaxed">
@@ -42,7 +42,7 @@ export const AboutPage: React.FC = () => {
           <div className="mt-6 flex flex-wrap items-center gap-2.5">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-[#C8102E] text-xs font-mono font-bold tracking-wider shadow-sm">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Special Class Contractor</span>
+              <span>Special Class Contractor · 40+ Year Legacy</span>
             </span>
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 border border-white/20 text-white text-xs font-mono font-bold tracking-wider">
               <span>Head Office: Kukatpally, Hyderabad · Branch: Anantapur</span>
@@ -68,13 +68,13 @@ export const AboutPage: React.FC = () => {
             </h2>
             <div className="space-y-3 text-neutral-700 text-xs sm:text-sm leading-relaxed">
               <p className="font-medium text-[#0F172A]/90">
-                Operating across Andhra Pradesh, Telangana, and Karnataka with corporate presence in Hyderabad and regional headquarters in Anantapur, Chakravarthy Constructions builds on a proud family practice in civil engineering and infrastructure spanning more than two decades across three generations.
+                Operating across Andhra Pradesh, Telangana, and Karnataka with corporate presence in Hyderabad and regional headquarters in Anantapur, Chakravarthy Constructions builds on a proud 40+ year family trajectory in civil engineering, heavy earthworks, reservoirs, and highways across three generations.
               </p>
               <p>
-                Under Chairman &amp; Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm has delivered reservoir formations in Adilabad, the Sarala Sagar modernization in Mahabubnagar, World Bank-assisted tank rehabilitation in Ananthapuramu, and today executes rock and earthworks on the 500 MW Chitravathi pumped storage project, major highways, and NHAI greenfield corridors.
+                Under Chairman &amp; Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm specializes extensively in Irrigation Department works — having delivered major reservoir formations in Adilabad, the Sarala Sagar modernization in Mahabubnagar, World Bank-assisted tank rehabilitation in Ananthapuramu, and currently executing over ₹50+ Crores in active infrastructure projects including rock and earthworks on the 500 MW Chitravathi pumped storage project, major highways, and NHAI greenfield corridors.
               </p>
               <p>
-                The firm's audited net worth stands at ₹3,10,79,450/- (29-04-2025) with 10-year contract receipts of ₹26.50+ Crores, reaching ₹6.55 Crores in FY 2024-25.
+                The firm's audited net worth stands at ₹3,10,79,450/- (29-04-2025) with cumulative 10-year contract receipts of ₹26.50+ Crores, reaching ₹6.55 Crores in FY 2024-25.
               </p>
             </div>
 
@@ -82,20 +82,20 @@ export const AboutPage: React.FC = () => {
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
                 <Users className="w-4 h-4 text-[#C8102E] mb-1.5" />
-                <h4 className="text-xs font-bold text-[#0F172A] font-heading">3 Generations</h4>
+                <h4 className="text-xs font-bold text-[#0F172A] font-heading">40+ Years &amp; 3 Gen</h4>
                 <p className="text-[11px] text-neutral-500 mt-0.5">Multi-generational continuity</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
                 <HardHat className="w-4 h-4 text-[#C8102E] mb-1.5" />
-                <h4 className="text-xs font-bold text-[#0F172A] font-heading">3 Key States</h4>
-                <p className="text-[11px] text-neutral-500 mt-0.5">AP, Telangana &amp; Karnataka</p>
+                <h4 className="text-xs font-bold text-[#0F172A] font-heading">Irrigation Specialists</h4>
+                <p className="text-[11px] text-neutral-500 mt-0.5">Reservoirs, canals &amp; bunds</p>
               </div>
 
               <div className="p-3.5 rounded-xl bg-white border border-black/5 shadow-sm">
                 <Award className="w-4 h-4 text-[#C8102E] mb-1.5" />
-                <h4 className="text-xs font-bold text-[#0F172A] font-heading">Special Class</h4>
-                <p className="text-[11px] text-neutral-500 mt-0.5">Highways &amp; Earth Works</p>
+                <h4 className="text-xs font-bold text-[#0F172A] font-heading">₹50+ Cr Ongoing</h4>
+                <p className="text-[11px] text-neutral-500 mt-0.5">Active infrastructure works</p>
               </div>
             </div>
           </motion.div>

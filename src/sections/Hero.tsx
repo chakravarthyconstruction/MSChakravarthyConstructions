@@ -27,12 +27,12 @@ export const Hero: React.FC = () => {
           <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/25 backdrop-blur-md text-white text-[11px] sm:text-xs font-semibold border border-white/20">
               <ShieldCheck className="w-3.5 h-3.5 text-red-300" />
-              Special Class Contractor · Est. 2009
+              Special Class Contractor · 40+ Year Trajectory
             </span>
 
             <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white text-[#C8102E] text-[10px] sm:text-[11px] font-mono font-extrabold uppercase shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-[#C8102E] animate-pulse" />
-              Verified AP &amp; KA
+              Irrigation Department Specialists
             </span>
           </div>
 
@@ -42,23 +42,26 @@ export const Hero: React.FC = () => {
               — CHAKRAVARTHY CONSTRUCTIONS —
             </span>
             <h1 className="text-2xl sm:text-3xl lg:text-[2.25rem] xl:text-[2.5rem] font-extrabold text-white leading-[1.12] tracking-tight font-heading">
-              Building Heavy Infrastructure That Lasts Generations.
+              Heavy Earthworks, Reservoirs &amp; Highways Built to Last.
             </h1>
 
             <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm text-white/90 font-medium max-w-xl leading-relaxed">
-              Special Class civil infrastructure contractor delivering major <strong className="text-white font-bold underline decoration-white/40 underline-offset-2">Highways &amp; Road Projects</strong>, large-scale <strong className="text-white font-bold underline decoration-white/40 underline-offset-2">Earth Works</strong>, irrigation canals, and water reservoirs across Karnataka, Andhra Pradesh, and Telangana.
+              Special Class Contractor carrying a 40+ year engineering trajectory in <strong className="text-white font-bold underline decoration-white/40 underline-offset-2">Heavy Earthworks</strong>, <strong className="text-white font-bold underline decoration-white/40 underline-offset-2">Reservoirs &amp; Check Dams</strong>, and <strong className="text-white font-bold underline decoration-white/40 underline-offset-2">Roads &amp; Highways</strong> — with specialized expertise in <strong className="text-white font-bold underline decoration-white/40 underline-offset-2">Irrigation Department Works</strong> across Andhra Pradesh, Telangana, and Karnataka.
             </p>
 
             {/* Quick Domain Tags */}
             <div className="flex flex-wrap gap-1.5 mt-3 text-[11px] sm:text-xs font-medium">
-              <span className="px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white">
+              <span className="px-2.5 py-0.5 rounded-full bg-white text-[#C8102E] font-bold shadow-sm">
+                ★ Irrigation Dept. Works
+              </span>
+              <span className="px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white">
+                Heavy Earthworks &amp; Reservoirs
+              </span>
+              <span className="px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white">
                 Highways &amp; Road Projects
               </span>
-              <span className="px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white">
-                Earth Works &amp; Grading
-              </span>
-              <span className="px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white">
-                Irrigation &amp; Canals
+              <span className="px-2.5 py-0.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 text-white">
+                Canals &amp; Check Dams
               </span>
             </div>
           </div>

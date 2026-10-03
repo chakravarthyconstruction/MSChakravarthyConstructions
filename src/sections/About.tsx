@@ -11,7 +11,7 @@ export const About: React.FC = () => {
     <section
       id="about"
       aria-label="About Chakravarthy Constructions"
-      className="py-10 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
+      className="py-8 sm:py-12 px-4 sm:px-6 lg:px-8 max-w-[1220px] mx-auto overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left Column: Editorial Statement and Context */}
@@ -41,13 +41,21 @@ export const About: React.FC = () => {
 
           {/* Key capability bullets */}
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white/70 p-2.5 rounded-xl border border-black/5">
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white p-3 rounded-xl border border-black/5 shadow-sm">
               <CheckCircle2 className="w-4 h-4 text-[#C8102E] shrink-0" />
-              <span>Three Generations of Legacy</span>
+              <span>Specialized in Irrigation Dept. Works</span>
             </div>
-            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white/70 p-2.5 rounded-xl border border-black/5">
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white p-3 rounded-xl border border-black/5 shadow-sm">
+              <CheckCircle2 className="w-4 h-4 text-[#C8102E] shrink-0" />
+              <span>40+ Year Trajectory &amp; 3 Generations</span>
+            </div>
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white p-3 rounded-xl border border-black/5 shadow-sm">
+              <CheckCircle2 className="w-4 h-4 text-[#C8102E] shrink-0" />
+              <span>₹50+ Cr Ongoing Infrastructure Works</span>
+            </div>
+            <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#0F172A] bg-white p-3 rounded-xl border border-black/5 shadow-sm">
               <Compass className="w-4 h-4 text-[#C8102E] shrink-0" />
-              <span>Andhra, Karnataka &amp; Telangana</span>
+              <span>Heavy Earthworks, Reservoirs &amp; Highways</span>
             </div>
           </div>
 

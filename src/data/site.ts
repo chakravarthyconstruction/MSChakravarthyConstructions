@@ -168,7 +168,7 @@ export const siteData: BusinessData = {
   shortName: 'Chakravarthy',
   tagline: 'Special Class Contractor & Civil Infrastructure Partner.',
   subTagline:
-    'Highways and road projects, bulk earth works, hard rock excavation, controlled blasting, reservoirs, and canal networks across Andhra Pradesh, Telangana, and Karnataka.',
+    '40+ year trajectory in heavy earthworks, reservoirs, roads & highways — specialized in Irrigation Department works across Andhra Pradesh, Telangana, and Karnataka.',
   phone: {
     display: '+91 81257 25425',
     tel: 'tel:+918125725425',
@@ -269,17 +269,17 @@ export const siteData: BusinessData = {
     ],
   },
   stats: [
-    { value: 26.5, suffix: ' Cr+', prefix: '₹', decimals: 1, label: '10-Yr Receipts' },
-    { value: 10, suffix: ' Cr', prefix: '₹', label: 'Single-Work Cap' },
+    { value: 50, suffix: '+ Cr', prefix: '₹', label: 'Ongoing Projects' },
+    { value: 26.5, suffix: '+ Cr', prefix: '₹', decimals: 1, label: '10-Yr Turnover' },
     { value: 3, suffix: '+', label: 'Key States' },
   ],
   about: {
-    headline: 'A 20+ year trajectory in highways, heavy earthworks, rock and water.',
+    headline: 'A 40+ year trajectory in heavy earthworks, reservoirs, roads & highways.',
     statement:
-      'Chakravarthy Constructions is a Special Class Contractor registered with the Water Resources Department, Government of Andhra Pradesh, and the Public Works Department, Government of Karnataka.',
+      'Chakravarthy Constructions is a Special Class Contractor registered with the Water Resources Department, Government of Andhra Pradesh, and the Public Works Department, Government of Karnataka, carrying forward a 40+ year multi-generational engineering trajectory.',
     summary:
-      'Led by Chairman & Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm executes major highways and road projects, bulk earth works, reservoirs, check dams, canal networks and hard rock excavation across Andhra Pradesh, Telangana and Karnataka — both as a direct government contractor and as an execution partner to leading infrastructure majors.',
-    experienceBadge: 'Special Class Contractor · Est. 2009',
+      'Led by Chairman & Founder Sri D. Nagaraju and Managing Director Sri D. Chakravarthy, the firm specializes extensively in Irrigation Department works — delivering major reservoirs, earthen bund formations, check dams, canal networks, and bulk earthworks, alongside national highway corridors across Andhra Pradesh, Telangana, and Karnataka.',
+    experienceBadge: 'Special Class Contractor · 40+ Year Legacy',
   },
   navLinks: [
     { label: 'Home', href: '/' },
