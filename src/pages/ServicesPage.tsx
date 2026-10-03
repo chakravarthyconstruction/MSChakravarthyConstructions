@@ -16,8 +16,11 @@ import {
 import { siteData } from '../data/site';
 import { SectionEyebrow } from '../components/SectionEyebrow';
 import { PillButton } from '../components/PillButton';
-import { ServiceScene3D } from '../components/ServiceScene3D';
 import { CTABanner } from '../sections/CTABanner';
+
+const ServiceScene3D = React.lazy(() =>
+  import('../components/ServiceScene3D').then((m) => ({ default: m.ServiceScene3D }))
+);
 
 const SPEC_ICONS = [Layers, Activity, Cpu, Compass];
 
@@ -90,10 +93,18 @@ const ServiceItemCard: React.FC<ServiceItemCardProps> = ({ service, index }) => 
                 transition={{ duration: 0.28 }}
                 className="w-full h-full"
               >
-                <ServiceScene3D
-                  serviceId={service.scene}
-                  className="w-full h-full rounded-[24px] border-0"
-                />
+                <React.Suspense
+                  fallback={
+                    <div className="w-full h-full flex items-center justify-center text-xs text-neutral-400 font-mono">
+                      Loading 3D View...
+                    </div>
+                  }
+                >
+                  <ServiceScene3D
+                    serviceId={service.scene}
+                    className="w-full h-full rounded-[24px] border-0"
+                  />
+                </React.Suspense>
               </motion.div>
             ) : (
               <motion.div

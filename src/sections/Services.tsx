@@ -4,7 +4,10 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ArrowUpRight, Sparkles, Camera } from 'lucide-react';
 import { siteData } from '../data/site';
 import { SectionEyebrow } from '../components/SectionEyebrow';
-import { ServiceScene3D } from '../components/ServiceScene3D';
+
+const ServiceScene3D = React.lazy(() =>
+  import('../components/ServiceScene3D').then((m) => ({ default: m.ServiceScene3D }))
+);
 
 export const Services: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -157,10 +160,18 @@ export const Services: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="w-full h-full"
                   >
-                    <ServiceScene3D
-                      serviceId={activeService.scene}
-                      className="w-full h-full rounded-[26px] border-0"
-                    />
+                    <React.Suspense
+                      fallback={
+                        <div className="w-full h-full flex items-center justify-center text-xs text-neutral-400 font-mono">
+                          Loading 3D Simulation...
+                        </div>
+                      }
+                    >
+                      <ServiceScene3D
+                        serviceId={activeService.scene}
+                        className="w-full h-full rounded-[26px] border-0"
+                      />
+                    </React.Suspense>
                   </motion.div>
                 ) : (
                   <motion.div

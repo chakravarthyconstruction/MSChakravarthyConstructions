@@ -18,9 +18,9 @@ export const Hero: React.FC<{ isBelowBanner?: boolean }> = ({ isBelowBanner = tr
       <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 items-stretch">
         {/* Left Bento: Crimson Red Architectural Panel */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.3 }}
           className="lg:col-span-7 bg-gradient-to-br from-[#C8102E] via-[#B91C1C] to-[#881337] rounded-[26px] sm:rounded-[32px] p-5 sm:p-7 lg:p-8 flex flex-col justify-between relative shadow-[0_16px_40px_rgba(200,16,46,0.20)] border border-red-600/30 text-white"
         >
           {/* Top Status & Credential Pills */}
@@ -89,9 +89,9 @@ export const Hero: React.FC<{ isBelowBanner?: boolean }> = ({ isBelowBanner = tr
 
         {/* Right Bento: Photo with Overlaid Stats */}
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.3 }}
           className="lg:col-span-5 relative rounded-[26px] sm:rounded-[32px] overflow-hidden min-h-[300px] sm:min-h-[360px] lg:min-h-[420px] flex flex-col justify-end shadow-lg border border-black/10 group"
         >
           {/* Main Hero Background Image */}

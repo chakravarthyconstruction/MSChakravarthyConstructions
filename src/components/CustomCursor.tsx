@@ -21,12 +21,24 @@ export const CustomCursor: React.FC = () => {
     const ringY = gsap.quickTo(ring, 'y', { duration: 0.28, ease: 'power3.out' });
 
     let isHovering = false;
+    let hasMoved = false;
 
     const onMouseMove = (e: MouseEvent) => {
+      if (!hasMoved) {
+        hasMoved = true;
+        dot.style.opacity = '1';
+        ring.style.opacity = '1';
+      }
       dotX(e.clientX);
       dotY(e.clientY);
       ringX(e.clientX);
       ringY(e.clientY);
+    };
+
+    const onMouseLeave = () => {
+      dot.style.opacity = '0';
+      ring.style.opacity = '0';
+      hasMoved = false;
     };
 
     const handlePointerOver = (e: MouseEvent) => {
@@ -65,24 +77,28 @@ export const CustomCursor: React.FC = () => {
 
     window.addEventListener('mousemove', onMouseMove);
     document.addEventListener('mouseover', handlePointerOver);
+    document.addEventListener('mouseleave', onMouseLeave);
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
       document.removeEventListener('mouseover', handlePointerOver);
+      document.removeEventListener('mouseleave', onMouseLeave);
     };
   }, []);
 
   return (
     <>
-      {/* Center Precision Dot */}
+      {/* Center Precision Dot - Hidden until pointer moves */}
       <div
         ref={cursorDotRef}
-        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#0F172A] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block"
+        style={{ opacity: 0 }}
+        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full bg-[#0F172A] pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 hidden md:block opacity-0 transition-opacity duration-150"
       />
-      {/* Surveyor Crosshair Outer Ring */}
+      {/* Surveyor Crosshair Outer Ring - Hidden until pointer moves */}
       <div
         ref={cursorRingRef}
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#0F172A]/40 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-colors"
+        style={{ opacity: 0 }}
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#0F172A]/40 pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 hidden md:block opacity-0 transition-opacity duration-150"
       />
     </>
   );

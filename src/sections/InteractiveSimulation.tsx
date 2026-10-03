@@ -2,9 +2,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Layers, Activity, Compass, Cpu } from 'lucide-react';
 import { SectionEyebrow } from '../components/SectionEyebrow';
-import { ThreeTerrainCanvas } from '../components/ThreeTerrainCanvas';
 import { BlueprintInspector } from '../components/BlueprintInspector';
 import { siteImages } from '../data/images';
+
+const ThreeTerrainCanvas = React.lazy(() =>
+  import('../components/ThreeTerrainCanvas').then((m) => ({ default: m.ThreeTerrainCanvas }))
+);
 
 export const InteractiveSimulation: React.FC = () => {
   return (
@@ -42,7 +45,15 @@ export const InteractiveSimulation: React.FC = () => {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="lg:col-span-7 flex flex-col justify-between"
         >
-          <ThreeTerrainCanvas className="h-[360px] sm:h-[420px]" />
+          <React.Suspense
+            fallback={
+              <div className="h-[360px] sm:h-[420px] rounded-[24px] sm:rounded-[28px] bg-slate-900 border border-slate-800 flex items-center justify-center text-xs text-neutral-400 font-mono">
+                Initializing 3D Telemetry...
+              </div>
+            }
+          >
+            <ThreeTerrainCanvas className="h-[360px] sm:h-[420px]" />
+          </React.Suspense>
 
           {/* Telemetry Status Bar below 3D canvas */}
           <div className="mt-3.5 grid grid-cols-3 gap-2.5">
