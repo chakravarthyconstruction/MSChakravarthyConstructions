@@ -49,6 +49,7 @@ export interface LeadershipMember {
   title: string;
   initials: string;
   photo?: string;
+  phone?: string;
   bio: string;
 }
 
@@ -176,8 +177,11 @@ export const siteData: BusinessData = {
     whatsappFormatted: '918125725425',
   },
   contactLines: [
-    { label: 'Primary Corporate Line', display: '+91 81257 25425', tel: 'tel:+918125725425' },
-    { label: 'Project Operations Desk', display: '+91 63051 67125', tel: 'tel:+916305167125' },
+    { label: 'Primary Corporate Line (Chairman)', display: '+91 81257 25425', tel: 'tel:+918125725425' },
+    { label: 'Project Operations Desk (Managing Director)', display: '+91 63051 67125', tel: 'tel:+916305167125' },
+    { label: 'Project Director (B. Sreemanth Reddy)', display: '+91 89782 52926', tel: 'tel:+918978252926' },
+    { label: 'Project Director (M. Chandra Babu)', display: '+91 97381 67330', tel: 'tel:+919738167330' },
+    { label: 'Project Manager (V. Indrasenareddy)', display: '+91 91773 60660', tel: 'tel:+919177360660' },
   ],
   email: 'srichakravarthyconstructions@gmail.com',
   offices: [
@@ -418,6 +422,7 @@ export const siteData: BusinessData = {
       title: 'Founder & Chairman',
       initials: 'DN',
       photo: '/images/leadership/nagaraju-chairman.webp',
+      phone: '+91 81257 25425',
       bio: 'Founded the firm and steers strategic governance, institutional client relationships, and a 40+ year multi-generational engineering trajectory across Andhra Pradesh, Telangana, and Karnataka.',
     },
     {
@@ -426,6 +431,7 @@ export const siteData: BusinessData = {
       title: 'Managing Director',
       initials: 'DC',
       photo: '/images/leadership/chakravarthy-md.webp',
+      phone: '+91 63051 67125',
       bio: 'Directs turnkey project delivery, heavy machinery fleet mobilization, highway economic corridors, water reservoirs, and specialized Irrigation Department works.',
     },
     {
@@ -434,6 +440,7 @@ export const siteData: BusinessData = {
       title: 'Executive Director — Projects',
       initials: 'BSR',
       photo: '/images/leadership/sreemanth-reddy.webp',
+      phone: '+91 89782 52926',
       bio: 'Supervises on-site engineering execution, surveying, quality assurance, and subgrade compaction across multi-lane highways and dams.',
     },
     {
@@ -442,7 +449,17 @@ export const siteData: BusinessData = {
       title: 'Executive Director — Projects & Operations',
       initials: 'MCB',
       photo: '/images/leadership/chandra-babu.webp',
+      phone: '+91 97381 67330',
       bio: 'Directs heavy machinery mobilization, quarrying logistics, crushing operations, and inter-state corridor plant deployment.',
+    },
+    {
+      name: 'VARADAREDDY INDRASENAREDDY',
+      role: 'Project Manager',
+      title: 'Project Manager — Site Operations',
+      initials: 'VIR',
+      photo: '/images/leadership/indrasenareddy-pm.webp',
+      phone: '+91 91773 60660',
+      bio: 'Oversees day-to-day site execution, field engineering teams, resource deployment, and strict quality compliance across active highway, reservoir, and earthwork zones.',
     },
   ],
   approach: [

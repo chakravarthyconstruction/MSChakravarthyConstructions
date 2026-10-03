@@ -7,36 +7,45 @@ import { Footer } from './sections/Footer';
 import { MobileStickyBar } from './components/MobileStickyBar';
 import { CustomCursor } from './components/CustomCursor';
 import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { ServicesPage } from './pages/ServicesPage';
-import { ReachPage } from './pages/ReachPage';
-import { ContactPage } from './pages/ContactPage';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { CredentialsPage } from './pages/CredentialsPage';
+// Route code-splitting for non-home pages so initial home page loads instantly
+const AboutPage = React.lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage').then(m => ({ default: m.ServicesPage })));
+const ProjectsPage = React.lazy(() => import('./pages/ProjectsPage').then(m => ({ default: m.ProjectsPage })));
+const CredentialsPage = React.lazy(() => import('./pages/CredentialsPage').then(m => ({ default: m.CredentialsPage })));
+const ReachPage = React.lazy(() => import('./pages/ReachPage').then(m => ({ default: m.ReachPage })));
+const ContactPage = React.lazy(() => import('./pages/ContactPage').then(m => ({ default: m.ContactPage })));
 
 const AnimatedRoutes: React.FC = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={location.pathname}
-        initial={{ opacity: 0, y: 12 }}
+        initial={{ opacity: 1, y: 0 }}
         animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -12 }}
-        transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+        exit={{ opacity: 0, y: -8 }}
+        transition={{ duration: 0.18 }}
         className="w-full"
       >
-        <Routes location={location}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/credentials" element={<CredentialsPage />} />
-          <Route path="/reach" element={<ReachPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<HomePage />} />
-        </Routes>
+        <React.Suspense
+          fallback={
+            <div className="min-h-[50vh] flex items-center justify-center text-xs font-mono text-neutral-400">
+              Loading...
+            </div>
+          }
+        >
+          <Routes location={location}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/credentials" element={<CredentialsPage />} />
+            <Route path="/reach" element={<ReachPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </React.Suspense>
       </motion.div>
     </AnimatePresence>
   );

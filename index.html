@@ -109,8 +109,34 @@
       }
     </script>
   </head>
-  <body>
-    <div id="root"></div>
+  <body style="margin: 0; background-color: #0F172A;">
+    <div id="root">
+      <!-- Instant First-Paint Shell: Eliminates white screen while JS bundle downloads -->
+      <div style="min-height: 100vh; background-color: #0F172A; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: white; padding: 20px; text-align: center;">
+        <div style="width: 60px; height: 60px; border-radius: 16px; background: #C8102E; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; box-shadow: 0 10px 30px rgba(200, 16, 46, 0.45);">
+          <img src="/logo.png" alt="Logo" width="42" height="42" style="object-fit: contain; filter: brightness(0) invert(1);" />
+        </div>
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #FCA5A5; text-transform: uppercase; margin-bottom: 6px;">
+          CHAKRAVARTHY CONSTRUCTIONS
+        </div>
+        <div style="font-size: 18px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.3px; margin-bottom: 8px;">
+          Heavy Earthworks · Reservoirs · Highways
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #94A3B8; background: rgba(255,255,255,0.08); padding: 4px 12px; border-radius: 999px; margin-bottom: 20px;">
+          <span>Special Class Contractor · 40+ Year Trajectory</span>
+        </div>
+        <div style="width: 120px; height: 3px; background: rgba(255,255,255,0.12); border-radius: 3px; overflow: hidden; position: relative;">
+          <div style="position: absolute; top: 0; left: 0; bottom: 0; width: 40%; background: #C8102E; border-radius: 3px; animation: initialPulse 0.9s infinite ease-in-out;"></div>
+        </div>
+      </div>
+      <style>
+        @keyframes initialPulse {
+          0% { left: -40%; width: 40%; }
+          50% { left: 40%; width: 50%; }
+          100% { left: 100%; width: 30%; }
+        }
+      </style>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
