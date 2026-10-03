@@ -156,14 +156,14 @@ export const Leadership: React.FC = () => {
           <div className="flex items-center gap-2 mb-4">
             <span className="h-px flex-1 bg-black/10" />
             <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-neutral-500 px-2 py-0.5 rounded-full bg-neutral-100 border border-black/5">
-              Project Directors &amp; Site Management
+              Project Directors, Site Operations &amp; Vendor Management (VMO)
             </span>
             <span className="h-px flex-1 bg-black/10" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
             {projectLeaders.map((leader, index) => {
-              const isDark = index === 1;
+              const isDark = index % 2 === 1;
               return (
                 <motion.div
                   key={leader.name}

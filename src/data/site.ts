@@ -182,6 +182,8 @@ export const siteData: BusinessData = {
     { label: 'Project Director (B. Sreemanth Reddy)', display: '+91 89782 52926', tel: 'tel:+918978252926' },
     { label: 'Project Director (M. Chandra Babu)', display: '+91 97381 67330', tel: 'tel:+919738167330' },
     { label: 'Project Manager (V. Indrasenareddy)', display: '+91 91773 60660', tel: 'tel:+919177360660' },
+    { label: 'Project Manager (Sathish Reddy)', display: '+91 96406 88800', tel: 'tel:+919640688800' },
+    { label: 'Vendor Management Office Lead (V. Durga Rao)', display: '+91 80195 35767', tel: 'tel:+918019535767' },
   ],
   email: 'srichakravarthyconstructions@gmail.com',
   offices: [
@@ -460,6 +462,24 @@ export const siteData: BusinessData = {
       photo: '/images/leadership/indrasenareddy-pm.webp',
       phone: '+91 91773 60660',
       bio: 'Oversees day-to-day site execution, field engineering teams, resource deployment, and strict quality compliance across active highway, reservoir, and earthwork zones.',
+    },
+    {
+      name: 'SATHISH REDDY',
+      role: 'Project Manager',
+      title: 'Project Manager — Site Operations & Delivery',
+      initials: 'SR',
+      photo: '/images/leadership/sathish-reddy-pm.webp',
+      phone: '+91 96406 88800',
+      bio: 'Manages site engineering execution, departmental liaison, machinery logistics, and structural quality control across major civil infrastructure contracts.',
+    },
+    {
+      name: 'V. DURGA RAO',
+      role: 'VMO Lead',
+      title: 'Vendor Management Office (VMO) Lead',
+      initials: 'VDR',
+      photo: '/images/leadership/durga-rao-vmo.webp',
+      phone: '+91 80195 35767',
+      bio: 'Spearheads vendor onboarding, subcontract compliance, material procurement networks, commercial negotiation, and supplier lifecycle management across regional infrastructure projects.',
     },
   ],
   approach: [
